@@ -19,20 +19,16 @@ import {
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+
 import CustomButtom from './src/components/CustomButtom/CustomButtom';
 import CustomCheckBox from './src/components/CustomCheckBox/CustomCheckBox';
+import CustomDatePicker from './src/components/CustomDatePicker/ CustomDatePicker';
+import CustomImagePicker from './src/components/CustomImagePicker/CustomImagePicker';
 import CustomInput from './src/components/CustomInput/CustomInput';
+import CustomSelect from './src/components/CustomSelect/CustomSelect';
 import CustomSwich from './src/components/CustomSwich/CustomSwich';
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
 
 
 
@@ -44,6 +40,9 @@ const App = () => {
         <CustomInput placeholder={'CustomInput'} keyboardType={'default'} />
         <CustomInput placeholder={'CustomInput'} keyboardType={'default'} multiline={true} />
         <CustomSwich />
+        <CustomSelect onSelect={() => console.log()} options={["A", "B"]} />
+        <CustomDatePicker />
+        <CustomImagePicker />
       </ScrollView>
     </SafeAreaView>
   );

@@ -1,4 +1,4 @@
-export type CustomSelectType = {
+export type CustomDatePickerType = {
   options: string[];
   onSelect: () => void;
 };
