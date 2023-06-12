@@ -1,37 +1,28 @@
 import { StyleSheet } from "react-native";
+import Colors from "../../utils/Colors";
 
 export const styles = StyleSheet.create({
   container: {
-    marginBottom: 35,
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    marginTop: 5,
   },
-  radioText: {
-    marginRight: 35,
-    fontSize: 20,
-    color: '#000',
-    fontWeight: '700'
+  btn: {
+    marginTop: 5
   },
-  radioCircle: {
-    height: 30,
-    width: 30,
-    borderRadius: 100,
-    borderWidth: 2,
-    borderColor: '#3740ff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  optionsContainer: {
+    alignContent: "center",
+    flexDirection: "row-reverse",
+    alignItems: "center"
   },
-  selectedRb: {
-    width: 15,
-    height: 15,
-    borderRadius: 50,
-    backgroundColor: '#3740ff',
+  circle: {
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+    backgroundColor: Colors.white,
+    marginLeft: 10,
+    borderColor: Colors.black,
+    borderWidth: 1,
   },
-  result: {
-    marginTop: 20,
-    color: 'white',
-    fontWeight: '600',
-    backgroundColor: '#F3FBFE',
-  },
+  selectedCircle: {
+    backgroundColor: Colors.green,
+  }
 });

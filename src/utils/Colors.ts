@@ -1,5 +1,7 @@
 const Colors = {
-    white: '#fff'
+    white: '#fff',
+    green: "green",
+    black: "black"
 }
 
 export default Colors;

@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
-import { Text, TextInput } from 'react-native';
-import { styles } from './CustomText.style';
+import React from 'react';
+import { Text } from 'react-native';
 import { CustomTextType } from './CustomText.type';
 
 const CustomText = (props: CustomTextType) => {
-  const { text } = props;
+  const { text, customStyle } = props;
 
   return (
-    <Text>{text}</Text>
+    <Text style={customStyle}>{text}</Text>
   );
 };
 

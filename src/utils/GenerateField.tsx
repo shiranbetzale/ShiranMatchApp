@@ -13,10 +13,7 @@ const generateField = (props: FormField) => {
             return <CustomInput placeholder={text} keyboardType={keyboardTypeOption || "default"} />
 
         case "radioButton":
-            return <>
-                <CustomText text={text} />
-                <CustomRadioButton radiosArray={options || []} />
-            </>
+            return <CustomRadioButton text={text} radiosArray={options || []} />
 
         case "datePicker":
             return <>

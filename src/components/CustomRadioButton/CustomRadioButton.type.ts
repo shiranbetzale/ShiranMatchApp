@@ -1,9 +1,8 @@
-export type RadiosObj = {
-  id: number;
-  label: string;
-}
+import { Option } from "../../utils/FormFields.type";
 
 export type CustomRadioButtonType = {
-  radiosArray: RadiosObj[];
+  radiosArray: Option[];
+  text: string;
+  onSelect: (option: Option) => void;
 };
 
