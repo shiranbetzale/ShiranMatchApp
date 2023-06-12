@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { View, Switch, StyleSheet } from "react-native";
-import { styles } from "./CustomSwich.style";
+import { styles } from "./CustomSwitch.style";
 
-const CustomSwich = () => {
+const CustomSwitch = () => {
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
@@ -20,4 +20,4 @@ const CustomSwich = () => {
 }
 
 
-export default CustomSwich;
+export default CustomSwitch;

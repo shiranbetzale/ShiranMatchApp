@@ -10,7 +10,7 @@ const CustomSelect = (props: CustomSelectType) => {
   return (
     <View style={styles.container}>
       <SelectDropdown
-        data={options}
+        data={options.map(option => option.label)}
         onSelect={(selectedItem, index) => {
           console.log(selectedItem, index)
           onSelect()
