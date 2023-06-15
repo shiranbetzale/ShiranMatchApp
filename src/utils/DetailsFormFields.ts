@@ -88,7 +88,7 @@ export const detailsFormArray: FormField[] = [
             { id: 1, label: "דתי" },
             { id: 2, label: "חרדי" },
             { id: 3, label: "חרדי מודרני" },
-            { id: 3, label: "חוזר בתשובה" }
+            { id: 4, label: "חוזר בתשובה" }
         ]
     },
     {
@@ -205,6 +205,11 @@ export const detailsFormArray: FormField[] = [
     },
     {
         text: "עדה?",
+        keyboardTypeOption: "default",
+        fieldType: "input"
+    },
+    {
+        text: "מי הרב שלי?",
         keyboardTypeOption: "default",
         fieldType: "input"
     }
