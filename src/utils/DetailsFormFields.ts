@@ -1,6 +1,6 @@
 import { FormField } from "./FormFields.type";
 
-export const detailsFormArray: FormField[] = [
+const detailsFormArray: FormField[] = [
     {
         text: "תעודת זהות",
         keyboardTypeOption: "numeric",
@@ -93,6 +93,10 @@ export const detailsFormArray: FormField[] = [
     },
     {
         text: "מעשן?",
+        fieldType: "switch"
+    },
+    {
+        text: "רישיון?",
         fieldType: "switch"
     },
     {

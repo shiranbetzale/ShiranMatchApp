@@ -1,7 +1,7 @@
 
 import React from 'react';
 import WhiteCard from '../../components/WhiteCard/WhiteCard';
-import { detailsFormArray } from '../../utils/DetailsFormFields';
+import detailsFormArray from '../../utils/DetailsFormFields';
 import generateField from '../../utils/GenerateField';
 import { styles } from './DetailsForm.style';
 
@@ -11,8 +11,8 @@ const DetailsForm = () => {//props: DetailsFormType
   return (
     <>
       {
-        detailsFormArray.map((field) => {
-          return <WhiteCard customStyle={styles.container}>
+        detailsFormArray.map((field, index) => {
+          return <WhiteCard key={index} customStyle={styles.container}>
             {generateField(field)}
           </WhiteCard>
         })

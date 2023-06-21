@@ -3,12 +3,14 @@ import { View } from "react-native";
 import { styles } from "./CustomSelect.style";
 import SelectDropdown from 'react-native-select-dropdown'
 import { CustomSelectType } from "./CustomSelect.type";
+import CustomText from "../CustomText/CustomText";
 
 const CustomSelect = (props: CustomSelectType) => {
-  const { options, onSelect } = props;
+  const { text, options, onSelect } = props;
 
   return (
     <View style={styles.container}>
+      <CustomText text={text} />
       <SelectDropdown
         data={options.map(option => option.label)}
         onSelect={(selectedItem, index) => {
