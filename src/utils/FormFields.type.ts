@@ -5,8 +5,9 @@ export type Option = {
 
 export type FormField = {
     text: string;
+    multiline?: boolean;
     keyboardTypeOption?: "default" | "numeric";
-    fieldType: "input" | "select" | "datePicker" | "switch" | "radioButton";
+    fieldType: "checkbox" | "input" | "select" | "datePicker" | "switch" | "radioButton";
     options?: Option[];
     handlePress?: () => void;
 }

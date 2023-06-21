@@ -1,3 +1,4 @@
+import CustomCheckBox from "../components/CustomCheckBox/CustomCheckBox";
 import CustomDatePicker from "../components/CustomDatePicker/ CustomDatePicker";
 import CustomInput from "../components/CustomInput/CustomInput";
 import CustomRadioButton from "../components/CustomRadioButton/CustomRadioButton";
@@ -6,11 +7,11 @@ import CustomSwitch from "../components/CustomSwitch/CustomSwitch";
 import { FormField } from "./FormFields.type";
 
 const generateField = (props: FormField) => {
-    const { text, keyboardTypeOption, fieldType, options, handlePress = () => { } } = props;
+    const { multiline, text, keyboardTypeOption, fieldType, options, handlePress = () => { } } = props;
 
     switch (fieldType) {
         case "input":
-            return <CustomInput placeholder={text} keyboardType={keyboardTypeOption || "default"} />
+            return <CustomInput multiline={multiline} placeholder={text} keyboardType={keyboardTypeOption || "default"} />
 
         case "radioButton":
             return <CustomRadioButton text={text} radiosArray={options || []} onSelect={handlePress} />
@@ -26,6 +27,9 @@ const generateField = (props: FormField) => {
 
         case "switch":
             return <CustomSwitch text={text} />
+
+        case "checkbox":
+            return <CustomCheckBox text={text} options={options || []} />
 
         default:
             break;

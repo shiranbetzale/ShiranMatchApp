@@ -22,38 +22,29 @@ const matchFormArray: FormField[] = [
         fieldType: "input"
     },
     {
-        text: "עיר מגורים",
-        keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        text: "גובה",
-        keyboardTypeOption: "numeric",
-        fieldType: "input"
-    },
-    {
-        text: "מייל",
-        keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        text: "טלפון",
-        keyboardTypeOption: "numeric",
-        fieldType: "input"
+        text: "אזור מגורים",
+        fieldType: "checkbox",
+        handlePress: () => console.log(),
+        options: [
+            { id: 1, label: "מרכז" },
+            { id: 2, label: "דרום" },
+            { id: 3, label: "צפון" },
+            { id: 4, label: "ירושלים" }
+        ]
     },
     {
         text: "סוג נייד",
-        fieldType: "select",
+        fieldType: "checkbox",
         handlePress: () => console.log(),
         options: [
             { id: 1, label: "כשר" },
             { id: 2, label: "מוגן" },
-            { id: 3, label: "לא מוגן" }
+            { id: 3, label: "לא מוגן" },
         ]
     },
     {
         text: "סטטוס",
-        fieldType: "select",
+        fieldType: "checkbox",
         handlePress: () => console.log(),
         options: [
             { id: 1, label: "רווק" },
@@ -64,13 +55,13 @@ const matchFormArray: FormField[] = [
         ]
     },
     {
-        text: "מספר ילדים",
+        text: "עד כמה ילדים",
         keyboardTypeOption: "numeric",
         fieldType: "input"
     },
     {
         text: "השקפה",
-        fieldType: "select",
+        fieldType: "checkbox",
         handlePress: () => console.log(),
         options: [
             { id: 1, label: "דתי" },
@@ -89,7 +80,7 @@ const matchFormArray: FormField[] = [
     },
     {
         text: "עיסוק",
-        fieldType: "select",
+        fieldType: "checkbox",
         handlePress: () => console.log(),
         options: [
             { id: 1, label: "בחור ישיבה" },
@@ -102,7 +93,7 @@ const matchFormArray: FormField[] = [
     },
     {
         text: "השכלה",
-        fieldType: "select",
+        fieldType: "checkbox",
         handlePress: () => console.log(),
         options: [
             { id: 1, label: "תואר" },
@@ -132,7 +123,7 @@ const matchFormArray: FormField[] = [
     },
     {
         text: "סוג זקן",
-        fieldType: "select",
+        fieldType: "checkbox",
         handlePress: () => console.log(),
         options: [
             { id: 1, label: "זקן - שלא נגעו בו" },
@@ -140,31 +131,6 @@ const matchFormArray: FormField[] = [
             { id: 3, label: "זיפים" },
             { id: 4, label: "מגולח" }
         ]
-    },
-    {
-        text: "ישיבה קטנה",
-        keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        text: "ישיבה גדולה",
-        keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        text: "קיבוץ",
-        keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        text: "כולל",
-        keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        text: "מה לומד?",
-        keyboardTypeOption: "default",
-        fieldType: "input"
     },
     {
         text: "לבוש",
@@ -197,9 +163,10 @@ const matchFormArray: FormField[] = [
         fieldType: "input"
     },
     {
-        text: "מי הרב שלי?",
+        text: "מה חשוב לי בבן/ת הזוג שלי?",
         keyboardTypeOption: "default",
-        fieldType: "input"
+        fieldType: "input",
+        multiline: true
     }
 ]
 

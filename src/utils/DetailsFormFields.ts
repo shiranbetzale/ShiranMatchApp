@@ -216,6 +216,18 @@ const detailsFormArray: FormField[] = [
         text: "מי הרב שלי?",
         keyboardTypeOption: "default",
         fieldType: "input"
+    },
+    {
+        text: "קצת עלי...",
+        keyboardTypeOption: "default",
+        fieldType: "input",
+        multiline: true
+    },
+    {
+        text: "טלפונים לברורים",
+        keyboardTypeOption: "default",
+        fieldType: "input",
+        multiline: true
     }
 ]
 
