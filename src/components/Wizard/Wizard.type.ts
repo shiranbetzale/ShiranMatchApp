@@ -1,3 +1,10 @@
+type WizarsStep = {
+    id: number;
+    name: string;
+    comp: any;
+}
+
 export type WizardType = {
-    navigation: any;
+    // navigation: any;
+    wizardSteps: WizarsStep[];
 };

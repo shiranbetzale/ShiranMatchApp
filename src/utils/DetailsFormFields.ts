@@ -14,8 +14,8 @@ const detailsFormArray: FormField[] = [
     {
         text: "מגדר",
         options: [
-            { id: 1, label: "זכר" },
-            { id: 1, label: "נקבה" }
+            { id: 1, name: "gender", label: "זכר" },
+            { id: 2, name: "gender", label: "נקבה" }
         ],
         fieldType: "radioButton"
     },

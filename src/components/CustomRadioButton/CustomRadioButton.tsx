@@ -19,7 +19,7 @@ const CustomRadioButton = (props: CustomRadioButtonType) => {
       <CustomText text={text} />
       <View style={styles.container} >
         {radiosArray.map((radioItem) => {
-          return <TouchableOpacity style={styles.btn} onPress={() => handleOptionSelect(radioItem)}>
+          return <TouchableOpacity key={`${radioItem.name}_${radioItem.id}`} style={styles.btn} onPress={() => handleOptionSelect(radioItem)}>
             <View style={styles.optionsContainer}>
               <View style={[styles.circle, selectedOption.label === radioItem.label && styles.selectedCircle]} />
               <CustomText text={radioItem.label} />
