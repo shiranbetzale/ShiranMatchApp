@@ -1,9 +1,9 @@
 import React from 'react';
 import {
+  ImageBackground,
   SafeAreaView,
   ScrollView,
   StyleSheet,
-  Text,
 } from 'react-native';
 import Wizard from './src/components/Wizard/Wizard';
 import Step1Screen from './src/screens/Step1Screen/Step1Screen';
@@ -17,10 +17,14 @@ const App = () => {
     { id: 3, name: "Step3", comp: Step3Screen }
   ]
 
+  const image = "./src/images/bg2.jpg";
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <Wizard wizardSteps={wizardSteps} />
+        <ImageBackground source={require(image)} resizeMode="repeat" style={styles.image}>
+          <Wizard wizardSteps={wizardSteps} />
+        </ImageBackground>
       </ScrollView>
     </SafeAreaView>
   );
@@ -28,7 +32,11 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "red"
+    flex: 1,
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
   },
 });
 

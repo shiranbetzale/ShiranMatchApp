@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { styles } from './Wizard.style';
 import { WizardType } from './Wizard.type';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import CustomButton from '../CustomButton/CustomButton';
-import CustomText from '../CustomText/CustomText';
-
-const Stack = createNativeStackNavigator();
+import { View } from 'react-native';
 
 const Wizard = (props: WizardType) => {
   const { wizardSteps = [] } = props;
@@ -17,7 +14,7 @@ const Wizard = (props: WizardType) => {
   }
 
   return (
-    <>
+    <View style={styles.container}>
       {
         wizardStep > 1 &&
         < CustomButton text='Prev' onPress={() => { setWizarsStep(wizardStep - 1) }} />
@@ -26,9 +23,10 @@ const Wizard = (props: WizardType) => {
         wizardStep < wizardSteps.length &&
         <CustomButton text='Next' onPress={() => { setWizarsStep(wizardStep + 1) }} />
       }
-      <CustomText text={wizardStep} />
-      {renderComp()}
-    </>
+      <View style={styles.containerDynamicComp}>
+        {renderComp()}
+      </View>
+    </View>
   );
 };
 

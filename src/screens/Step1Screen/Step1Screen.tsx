@@ -1,15 +1,14 @@
 
 import React from 'react';
-import { Text, View } from 'react-native';
-import CustomButton from '../../components/CustomButton/CustomButton';
+import CustomText from '../../components/CustomText/CustomText';
 import DetailsForm from '../../components/DetailsForm/DetailsForm';
 import { styles } from './Step1Screen.style';
 
-const Step1Screen = ({ navigation }: any) => {
+const Step1Screen = () => {
 
   return (
     <>
-      <Text>Step 1</Text>
+      <CustomText text={"קצת עלי"} />
       <DetailsForm />
     </>
   );
