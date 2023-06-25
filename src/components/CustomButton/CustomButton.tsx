@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
+import CustomText from '../CustomText/CustomText';
 import { styles } from './CustomButton.style';
 import { CustomButtonType } from './CustomButton.type';
 
@@ -8,7 +9,7 @@ const CustomButton = (props: CustomButtonType) => {
 
   return (
     <TouchableOpacity style={[customStyle, { ...styles.button }]} onPress={onPress}>
-      <Text>{text}</Text>
+      <CustomText text={text} />
     </TouchableOpacity>
   );
 };
