@@ -11,16 +11,6 @@ public class MainActivity extends ReactActivity {
   protected void onCreate(Bundle savedInstanceState) {
     // SplashScreen.show(this);
     super.onCreate(savedInstanceState);
-     try {
-        Typeface customFont = Typeface.createFromAsset(getAssets(), "Regular.ttf");
-        Field defaultFontTypefaceField = Typeface.class.getDeclaredField("DEFAULT");
-        defaultFontTypefaceField.setAccessible(true);
-        defaultFontTypefaceField.set(null, customFont);
-      } 
-      catch (NoSuchFieldException | IllegalAccessException e) {
-        Log.e("FONT", "Failed to set custom font");
-      }
-    }
   }
 
   /**
