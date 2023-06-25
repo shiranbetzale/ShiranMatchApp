@@ -1,4 +1,4 @@
-export type CustomImagePickerType = {
-  options: string[];
-  onSelect: () => void;
-};
+// export type CustomImagePickerType = {
+//   options: string[];
+//   onSelect: () => void;
+// };
