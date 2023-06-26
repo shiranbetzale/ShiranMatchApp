@@ -17,6 +17,7 @@
     "react-native-date-picker": "^4.2.6",
     "react-native-device-info": "^10.6.0",
     "react-native-select-dropdown": "^3.2.1",
+    "react-native-svg": "^13.9.0",
     "react-native-vector-icons": "^9.2.0"
   },
   "devDependencies": {

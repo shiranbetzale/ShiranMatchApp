@@ -4,6 +4,8 @@ import { styles } from "./CustomDatePicker.style";
 import { CustomDatePickerType } from "./CustomDatePicker.type";
 import DatePicker from 'react-native-date-picker'
 import CustomText from "../CustomText/CustomText";
+import CustomButton from "../CustomButton/CustomButton";
+import { SvgUri } from 'react-native-svg';
 
 const CustomDatePicker = (props: CustomDatePickerType) => {
   const { text } = props;
@@ -13,22 +15,30 @@ const CustomDatePicker = (props: CustomDatePickerType) => {
   return (
     <View style={styles.container}>
       <CustomText text={text} />
-      <Button title="Open" onPress={() => setOpen(true)} />
-      <DatePicker
-        modal
-        open={open}
-        date={date}
-        mode="date"
-        onConfirm={(date) => {
-          setOpen(false)
-          setDate(date)
-          console.log(date);
-        }}
-        onCancel={() => {
-          setOpen(false)
-        }}
-      />
-      <Text>{date.toISOString()}</Text>
+      <View style={styles.dateContainer}>
+        <CustomText text={date.toLocaleDateString("he-IL")} />
+        <CustomButton onPress={() => setOpen(true)} >
+          <SvgUri
+            width="500"
+            height="500"
+            uri={require("../../images/datePicker.svg")}
+          />
+        </CustomButton>
+        <DatePicker
+          modal
+          open={open}
+          date={date}
+          mode="date"
+          onConfirm={(date) => {
+            setOpen(false)
+            setDate(date)
+            console.log(date);
+          }}
+          onCancel={() => {
+            setOpen(false)
+          }}
+        />
+      </View>
     </View>
   );
 }

@@ -3,6 +3,8 @@ import { styles } from './Wizard.style';
 import { WizardType } from './Wizard.type';
 import CustomButton from '../CustomButton/CustomButton';
 import { ImageBackground, View, ScrollView } from 'react-native';
+import CustomText from '../CustomText/CustomText';
+import { FontsStyle } from '../../utils/FontsStyle';
 
 const Wizard = (props: WizardType) => {
   const { wizardSteps = [] } = props;
@@ -23,6 +25,10 @@ const Wizard = (props: WizardType) => {
           text='הקודם'
           onPress={() => { setWizarsStep(wizardStep - 1) }}
           customStyle={styles.btn}
+        />
+        <CustomText
+          customStyle={FontsStyle.title}
+          text={wizardSteps.find((step) => step.id === wizardStep)?.title}
         />
         <CustomButton
           disabled={wizardStep >= wizardSteps.length}

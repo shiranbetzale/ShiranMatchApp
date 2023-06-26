@@ -4,7 +4,12 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
-  },
+    justifyContent: "space-between",
+    flexDirection: "row-reverse",
 
+  },
+  dateContainer: {
+    marginRight: 15,
+    flexDirection: "column-reverse"
+  }
 });

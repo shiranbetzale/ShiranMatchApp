@@ -10,9 +10,9 @@ import Step3Screen from './src/screens/Step3Screen/Step3Screen';
 
 const App = () => {
   const wizardSteps = [
-    { id: 1, name: "Step1", comp: Step1Screen },
-    { id: 2, name: "Step2", comp: Step2Screen },
-    { id: 3, name: "Step3", comp: Step3Screen }
+    { id: 1, name: "Step1", title: "קצת עלי", comp: Step1Screen },
+    { id: 2, name: "Step2", title: "על בן הזוג", comp: Step2Screen },
+    { id: 3, name: "Step3", title: "העלאת תמונוץ", comp: Step3Screen }
   ];
 
   return (

@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import Colors from "./Colors";
 
 const fontFamily = {
     extraBold: "ExtraBold",
@@ -11,10 +12,13 @@ const fontFamily = {
 export const FontsStyle = StyleSheet.create({
     title: {
         fontFamily: fontFamily.bold,
+        color: Colors.btn,
         fontSize: 24,
     },
     text: {
         fontFamily: fontFamily.regular,
-        fontSize: 18,
+        textAlign: "right",
+        color: Colors.black,
+        fontSize: 16,
     }
 });

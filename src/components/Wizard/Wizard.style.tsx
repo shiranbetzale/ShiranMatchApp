@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 import Colors from '../../utils/Colors';
 
 export const styles = StyleSheet.create({
@@ -7,22 +7,23 @@ export const styles = StyleSheet.create({
     width: '100%',
   },
   wizardContainer: {
-    backgroundColor: Colors.darkGreen,
     width: '100%',
     borderBottomWidth: 1,
-    alignItems: "flex-end",
-    // ...Colors.Shadow,
+    justifyContent: "space-between",
+    flexDirection: "row-reverse",
+    alignItems: "center",
+    padding: 10,
+    backgroundColor: Colors.darkGreen,
+  },
+  btn: {
   },
   containerDynamicComp: {
-    flex: 1,
-    alignItems: "flex-end",
+    alignItems: "stretch",
     width: '100%'
   },
   image: {
-    width: '100%'
+    alignItems: "center",
+    width: Dimensions.get("screen").width,
+    minHeight: Dimensions.get("screen").height,
   },
-  btn: {
-    // width: 200,
-    // flexDirection: "column-reverse",
-  }
 });

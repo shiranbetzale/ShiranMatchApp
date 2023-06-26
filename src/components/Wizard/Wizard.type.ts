@@ -1,6 +1,7 @@
 type WizarsStep = {
     id: number;
     name: string;
+    title: string;
     comp: any;
 }
 
