@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import Colors from "../../utils/Colors";
 
 export const styles = StyleSheet.create({
   input: {
@@ -6,6 +7,7 @@ export const styles = StyleSheet.create({
     marginTop: 5,
     borderWidth: 1,
     padding: 10,
+    borderColor: Colors.btn
   },
   textArea: {
     height: 140,

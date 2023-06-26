@@ -1,4 +1,5 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
+import Colors from '../../utils/Colors';
 
 export const styles = StyleSheet.create({
   container: {
@@ -8,8 +9,10 @@ export const styles = StyleSheet.create({
   },
   button: {
     alignItems: 'center',
-    backgroundColor: '#DDDDDD',
-    padding: 10,
+    backgroundColor: Colors.lightBrown,
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderRadius: 5
   },
   countContainer: {
     alignItems: 'center',

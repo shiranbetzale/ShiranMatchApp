@@ -13,16 +13,16 @@ const CustomCheckBox = (props: CustomCheckBoxType) => {
   return (
     <View style={styles.checkboxContainer}>
       {
-        options.map((option) => {
-          return <>
+        options.map((option, index) => {
+          return <View key={index}>
             <CustomText text={option.label} />
             <CheckBox
               value={isSelected}
               onValueChange={setSelection}
               style={styles.checkbox}
-              key={option.id}
+              key={`checkBox_${option.id}`}
             />
-          </>
+          </View>
         })
       }
       <CustomText text={text} />
