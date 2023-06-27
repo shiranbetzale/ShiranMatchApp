@@ -18,10 +18,11 @@ const CustomDatePicker = (props: CustomDatePickerType) => {
       <View style={styles.dateContainer}>
         <CustomText text={date.toLocaleDateString("he-IL")} />
         <CustomButton onPress={() => setOpen(true)} >
+          {/* <DatePickerSvg /> */}
           <SvgUri
             width="500"
             height="500"
-            uri={require("../../images/datePicker.svg")}
+            uri={require("../../images/datePickerSvg.svg")}
           />
         </CustomButton>
         <DatePicker

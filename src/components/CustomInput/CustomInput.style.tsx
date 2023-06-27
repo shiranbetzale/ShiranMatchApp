@@ -13,11 +13,17 @@ export const styles = StyleSheet.create({
   },
   textArea: {
     height: 140,
+    width: "100%",
+    marginRight: 0
   },
   container: {
     flex: 1,
     flexDirection: "row-reverse",
     alignItems: "center",
     justifyContent: "space-between"
+  },
+  textAreaContainer: {
+    alignItems: "flex-end",
+    flexDirection: "column",
   }
 });

@@ -3,15 +3,17 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: "flex-end",
+    flexDirection: "column-reverse",
   },
   checkboxContainer: {
     flexDirection: "row",
-    marginBottom: 20,
+    alignItems: "center",
+    marginTop: 20,
   },
   checkbox: {
     alignSelf: "center",
+    marginLeft: 10,
   },
   label: {
     margin: 8,

@@ -12,6 +12,8 @@ const CustomSelect = (props: CustomSelectType) => {
     <View style={styles.container}>
       <CustomText text={text} />
       <SelectDropdown
+        defaultValue="Select an item"
+
         data={options.map(option => option.label)}
         onSelect={(selectedItem, index) => {
           console.log(selectedItem, index)

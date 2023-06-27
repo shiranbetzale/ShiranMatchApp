@@ -10,7 +10,7 @@ const CustomInput = (props: CustomInputType) => {
   const [text, onChangeText] = useState<string>('');
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, multiline && styles.textAreaContainer]}>
       <CustomText text={placeholder} />
       <TextInput
         style={[styles.input, multiline && styles.textArea]}

@@ -4,11 +4,13 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>ExtraBold.ttf</string>
-		<string>Light.ttf</string>
-		<string>Medium.ttf</string>
-		<string>Regular.ttf</string>
-		<string>SemiBold.ttf</string>	
+		<string>IBMPlexSansHebrew-Bold.ttf</string>
+		<string>IBMPlexSansHebrew-ExtraLight.ttf</string>
+		<string>IBMPlexSansHebrew-Light.ttf</string>
+		<string>IBMPlexSansHebrew-Medium.ttf</string>
+		<string>IBMPlexSansHebrew-Regular.ttf</string>
+		<string>IBMPlexSansHebrew-SemiBold.ttf</string>
+		<string>IBMPlexSansHebrew-Thin.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
@@ -44,7 +46,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

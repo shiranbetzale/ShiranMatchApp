@@ -2,16 +2,16 @@ import { StyleSheet } from "react-native";
 import Colors from "./Colors";
 
 const fontFamily = {
-    extraBold: "ExtraBold",
-    semiBold: "SemiBold",
-    bold: "Medium",
-    regular: "Regular",
-    light: "Light",
+    medium: "IBMPlexSansHebrew-Medium",
+    semiBold: "IBMPlexSansHebrew-SemiBold",
+    bold: "IBMPlexSansHebrew-Medium",
+    regular: "IBMPlexSansHebrew-Regular",
+    light: "IBMPlexSansHebrew-Light",
 };
 
 export const FontsStyle = StyleSheet.create({
     title: {
-        fontFamily: fontFamily.bold,
+        fontFamily: fontFamily.semiBold,
         color: Colors.btn,
         fontSize: 24,
     },

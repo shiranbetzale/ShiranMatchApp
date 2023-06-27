@@ -11,10 +11,10 @@ const CustomCheckBox = (props: CustomCheckBoxType) => {
   const [isSelected, setSelection] = useState(false);
 
   return (
-    <View style={styles.checkboxContainer}>
+    <View style={styles.container}>
       {
         options.map((option, index) => {
-          return <View key={index}>
+          return <View key={index} style={styles.checkboxContainer}>
             <CustomText text={option.label} />
             <CheckBox
               value={isSelected}

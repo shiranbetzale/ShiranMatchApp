@@ -6,10 +6,7 @@ import UploadPictures from '../../components/UploadPictures/UploadPictures';
 const Step3Screen = () => {
 
   return (
-    <>
-      <CustomText text={"תמונות"} />
-      <UploadPictures />
-    </>
+    <UploadPictures />
   );
 };
 
