@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, Switch, StyleSheet } from "react-native";
+import Colors from "../../utils/Colors";
 import CustomText from "../CustomText/CustomText";
 import { styles } from "./CustomSwitch.style";
 import { CustomSwitchType } from "./CustomSwitch.type";
@@ -13,8 +14,8 @@ const CustomSwitch = (props: CustomSwitchType) => {
     <View style={styles.container}>
       <CustomText text={text} />
       <Switch
-        trackColor={{ false: "#767577", true: "#81b0ff" }}
-        thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
+        trackColor={{ false: "#767577", true: Colors.border }}
+        thumbColor={isEnabled ? Colors.btn : "#f4f3f4"}
         ios_backgroundColor="#3e3e3e"
         onValueChange={toggleSwitch}
         value={isEnabled}

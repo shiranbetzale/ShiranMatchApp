@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     width: 120,
-    borderColor: Colors.btn
+    borderColor: Colors.border
   },
   textArea: {
     height: 140,

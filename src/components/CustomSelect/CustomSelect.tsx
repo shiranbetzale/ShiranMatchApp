@@ -4,6 +4,7 @@ import { styles } from "./CustomSelect.style";
 import SelectDropdown from 'react-native-select-dropdown'
 import { CustomSelectType } from "./CustomSelect.type";
 import CustomText from "../CustomText/CustomText";
+import { FontsStyle } from "../../utils/FontsStyle";
 
 const CustomSelect = (props: CustomSelectType) => {
   const { text, options, onSelect } = props;
@@ -12,9 +13,12 @@ const CustomSelect = (props: CustomSelectType) => {
     <View style={styles.container}>
       <CustomText text={text} />
       <SelectDropdown
-        defaultValue="Select an item"
-
+        defaultButtonText="בחר/י מתוך הרשימה"
         data={options.map(option => option.label)}
+        rowTextStyle={FontsStyle.text}
+        buttonStyle={[styles.dropdownRow, styles.select]}
+        buttonTextStyle={FontsStyle.text}
+        selectedRowStyle={styles.dropdownRow}
         onSelect={(selectedItem, index) => {
           console.log(selectedItem, index)
           onSelect()

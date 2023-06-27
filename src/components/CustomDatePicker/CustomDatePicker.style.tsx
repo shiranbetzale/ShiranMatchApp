@@ -6,10 +6,15 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     flexDirection: "row-reverse",
-
   },
   dateContainer: {
-    marginRight: 15,
-    flexDirection: "column-reverse"
+    marginLeft: 15,
+    flexDirection: "row-reverse",
+    alignItems: "center",
+  },
+  datePickerBtn: {
+    paddingHorizontal: 0,
+    paddingVertical: 0,
+    marginRight: 10
   }
 });

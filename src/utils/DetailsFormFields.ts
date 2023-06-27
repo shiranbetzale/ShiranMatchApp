@@ -39,6 +39,26 @@ const detailsFormArray: FormField[] = [
         fieldType: "input"
     },
     {
+        text: "שם של האבא",
+        keyboardTypeOption: "default",
+        fieldType: "input"
+    },
+    {
+        text: "שם של תיכון",
+        keyboardTypeOption: "default",
+        fieldType: "input"
+    },
+    {
+        text: "שם של סמינר",
+        keyboardTypeOption: "default",
+        fieldType: "input"
+    },
+    {
+        text: "שם של האמא",
+        keyboardTypeOption: "default",
+        fieldType: "input"
+    },
+    {
         text: "גובה",
         keyboardTypeOption: "numeric",
         fieldType: "input"
@@ -143,7 +163,8 @@ const detailsFormArray: FormField[] = [
         handlePress: () => console.log(),
         options: [
             { id: 1, label: "בהיר" },
-            { id: 2, label: "כהה" }
+            { id: 1, label: "בהיר" },
+            { id: 3, label: "לא משנה" }
         ]
     },
     {
@@ -224,11 +245,17 @@ const detailsFormArray: FormField[] = [
         multiline: true
     },
     {
+        text: "קצת על המשפחה",
+        keyboardTypeOption: "default",
+        fieldType: "input",
+        multiline: true
+    },
+    {
         text: "טלפונים לברורים",
         keyboardTypeOption: "default",
         fieldType: "input",
         multiline: true
-    }
+    },
 ]
 
 export default detailsFormArray;

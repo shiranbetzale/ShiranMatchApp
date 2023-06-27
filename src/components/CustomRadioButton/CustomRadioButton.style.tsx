@@ -23,6 +23,6 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
   },
   selectedCircle: {
-    backgroundColor: Colors.darkGreen,
+    backgroundColor: Colors.border,
   }
 });

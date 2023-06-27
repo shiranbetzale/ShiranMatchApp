@@ -104,7 +104,7 @@ const matchFormArray: FormField[] = [
     },
     {
         text: "מבנה גוף",
-        fieldType: "select",
+        fieldType: "checkbox",
         handlePress: () => console.log(),
         options: [
             { id: 1, label: "רזה" },
@@ -134,7 +134,7 @@ const matchFormArray: FormField[] = [
     },
     {
         text: "לבוש",
-        fieldType: "select",
+        fieldType: "checkbox",
         handlePress: () => console.log(),
         options: [
             { id: 1, label: "שחור לבן" },

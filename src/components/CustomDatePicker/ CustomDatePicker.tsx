@@ -5,7 +5,7 @@ import { CustomDatePickerType } from "./CustomDatePicker.type";
 import DatePicker from 'react-native-date-picker'
 import CustomText from "../CustomText/CustomText";
 import CustomButton from "../CustomButton/CustomButton";
-import { SvgUri } from 'react-native-svg';
+import DatePickerSvg from "../../images/DatePickerSvg";
 
 const CustomDatePicker = (props: CustomDatePickerType) => {
   const { text } = props;
@@ -17,13 +17,10 @@ const CustomDatePicker = (props: CustomDatePickerType) => {
       <CustomText text={text} />
       <View style={styles.dateContainer}>
         <CustomText text={date.toLocaleDateString("he-IL")} />
-        <CustomButton onPress={() => setOpen(true)} >
-          {/* <DatePickerSvg /> */}
-          <SvgUri
-            width="500"
-            height="500"
-            uri={require("../../images/datePickerSvg.svg")}
-          />
+        <CustomButton
+          customStyle={styles.datePickerBtn}
+          onPress={() => setOpen(true)} >
+          <DatePickerSvg />
         </CustomButton>
         <DatePicker
           modal

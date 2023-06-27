@@ -24,6 +24,7 @@ export const styles = StyleSheet.create({
   image: {
     alignItems: "center",
     width: Dimensions.get("screen").width,
-    minHeight: Dimensions.get("screen").height,
+    minHeight: Dimensions.get("screen").height - 100,
+    paddingBottom: 50
   },
 });

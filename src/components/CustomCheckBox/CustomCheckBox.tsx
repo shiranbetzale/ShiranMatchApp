@@ -4,6 +4,7 @@ import CheckBox from '@react-native-community/checkbox';
 import { CustomCheckBoxType } from "./CustomCheckBox.type";
 import { styles } from "./CustomCheckBox.style";
 import CustomText from "../CustomText/CustomText";
+import Colors from "../../utils/Colors";
 
 const CustomCheckBox = (props: CustomCheckBoxType) => {
   const { text, options } = props;
@@ -21,6 +22,9 @@ const CustomCheckBox = (props: CustomCheckBoxType) => {
               onValueChange={setSelection}
               style={styles.checkbox}
               key={`checkBox_${option.id}`}
+              onCheckColor={Colors.border}
+              onTintColor={Colors.border}
+
             />
           </View>
         })
