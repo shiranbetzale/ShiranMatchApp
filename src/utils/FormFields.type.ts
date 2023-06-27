@@ -8,7 +8,10 @@ export type FormField = {
     text: string;
     multiline?: boolean;
     keyboardTypeOption?: "default" | "numeric";
-    fieldType: "checkbox" | "input" | "select" | "datePicker" | "switch" | "radioButton";
+    fieldType: "checkbox" | "range" | "input" | "select" | "datePicker" | "switch" | "radioButton";
     options?: Option[];
     handlePress?: () => void;
+    minRange?: number;
+    maxRange?: number;
+    step?: number;
 }

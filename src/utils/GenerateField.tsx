@@ -2,12 +2,13 @@ import CustomCheckBox from "../components/CustomCheckBox/CustomCheckBox";
 import CustomDatePicker from "../components/CustomDatePicker/ CustomDatePicker";
 import CustomInput from "../components/CustomInput/CustomInput";
 import CustomRadioButton from "../components/CustomRadioButton/CustomRadioButton";
+import CustomRange from "../components/CustomRange/CustomRange";
 import CustomSelect from "../components/CustomSelect/CustomSelect";
 import CustomSwitch from "../components/CustomSwitch/CustomSwitch";
 import { FormField } from "./FormFields.type";
 
 const generateField = (props: FormField) => {
-    const { multiline, text, keyboardTypeOption, fieldType, options, handlePress = () => { } } = props;
+    const { minRange, maxRange, step, multiline, text, keyboardTypeOption, fieldType, options, handlePress = () => { } } = props;
 
     switch (fieldType) {
         case "input":
@@ -30,6 +31,9 @@ const generateField = (props: FormField) => {
 
         case "checkbox":
             return <CustomCheckBox text={text} options={options || []} />
+
+        case "range":
+            return <CustomRange text={text} step={step || 0} minRange={minRange || 0} maxRange={maxRange || 0} />
 
         default:
             break;

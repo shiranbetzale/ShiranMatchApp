@@ -24,7 +24,6 @@ const CustomCheckBox = (props: CustomCheckBoxType) => {
               key={`checkBox_${option.id}`}
               onCheckColor={Colors.border}
               onTintColor={Colors.border}
-
             />
           </View>
         })

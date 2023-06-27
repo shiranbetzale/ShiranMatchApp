@@ -2,24 +2,18 @@ import { FormField } from "./FormFields.type";
 
 const matchFormArray: FormField[] = [
     {
-        text: "מאיזה גיל",
-        keyboardTypeOption: "numeric",
-        fieldType: "input"
+        text: "טווח גילאים",
+        fieldType: "range",
+        minRange: 18,
+        maxRange: 90,
+        step: 1
     },
     {
-        text: "עד איזה גיל",
-        keyboardTypeOption: "numeric",
-        fieldType: "input"
-    },
-    {
-        text: "מאיזה גובה",
-        keyboardTypeOption: "numeric",
-        fieldType: "input"
-    },
-    {
-        text: "עד איזה גובה",
-        keyboardTypeOption: "numeric",
-        fieldType: "input"
+        text: "טווח גבהים",
+        fieldType: "range",
+        minRange: 1.4,
+        maxRange: 2.0,
+        step: 0.1
     },
     {
         text: "אזור מגורים",

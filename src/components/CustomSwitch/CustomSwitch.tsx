@@ -14,9 +14,9 @@ const CustomSwitch = (props: CustomSwitchType) => {
     <View style={styles.container}>
       <CustomText text={text} />
       <Switch
-        trackColor={{ false: "#767577", true: Colors.border }}
-        thumbColor={isEnabled ? Colors.btn : "#f4f3f4"}
-        ios_backgroundColor="#3e3e3e"
+        trackColor={{ false: Colors.black, true: Colors.border }}
+        thumbColor={isEnabled ? Colors.btn : Colors.white}
+        ios_backgroundColor={Colors.black}
         onValueChange={toggleSwitch}
         value={isEnabled}
       />
