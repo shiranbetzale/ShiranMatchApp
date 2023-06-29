@@ -1,22 +1,26 @@
 import React, { useState } from "react";
-import { Button, Text, View } from "react-native";
+import { View } from "react-native";
 import { styles } from "./CustomDatePicker.style";
 import { CustomDatePickerType } from "./CustomDatePicker.type";
 import DatePicker from 'react-native-date-picker'
 import CustomText from "../CustomText/CustomText";
 import CustomButton from "../CustomButton/CustomButton";
 import DatePickerSvg from "../../images/DatePickerSvg";
+import { FontsStyle } from "../../utils/FontsStyle";
 
 const CustomDatePicker = (props: CustomDatePickerType) => {
-  const { text } = props;
-  const [date, setDate] = useState(new Date())
-  const [open, setOpen] = useState(false)
+  const { text, maxDate } = props;
+  const [date, setDate] = useState<Date>(new Date());
+  const [open, setOpen] = useState<boolean>(false);
 
   return (
     <View style={styles.container}>
       <CustomText text={text} />
       <View style={styles.dateContainer}>
-        <CustomText text={date.toLocaleDateString("he-IL")} />
+        <CustomText
+          text={date.toLocaleDateString("he-IL")}
+          customStyle={FontsStyle.text}
+        />
         <CustomButton
           customStyle={styles.datePickerBtn}
           onPress={() => setOpen(true)} >
@@ -35,6 +39,7 @@ const CustomDatePicker = (props: CustomDatePickerType) => {
           onCancel={() => {
             setOpen(false)
           }}
+          maximumDate={maxDate}
         />
       </View>
     </View>

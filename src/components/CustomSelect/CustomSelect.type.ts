@@ -3,5 +3,5 @@ import { Option } from "../../utils/FormFields.type";
 export type CustomSelectType = {
   text: string;
   options: Option[];
-  onSelect: () => void;
+  onSelect: (option?: Option) => void;
 };

@@ -2,256 +2,422 @@ import { FormField } from "./FormFields.type";
 
 const detailsFormArray: FormField[] = [
     {
-        text: "תעודת זהות",
+        id: "id",
+        text: "תעודת זהות:",
         keyboardTypeOption: "numeric",
-        fieldType: "input"
+        fieldType: "input",
     },
     {
-        text: "שם מלא",
+        id: "fullName",
+        text: "שם מלא:",
         keyboardTypeOption: "default",
         fieldType: "input"
     },
     {
-        text: "מגדר",
+        id: "gender",
+        text: "מגדר:",
         options: [
             { id: 1, name: "gender", label: "זכר" },
             { id: 2, name: "gender", label: "נקבה" }
         ],
-        fieldType: "radioButton"
+        fieldType: "radioButton",
+        handlePress: () => { }
     },
     {
-        text: "תאריך לידה עברי",
+        id: "birthDateHe",
+        text: "תאריך לידה עברי:",
         keyboardTypeOption: "default",
         fieldType: "input"
     },
     {
-        text: "תאריך לידה לועזי",
-        fieldType: "datePicker"
+        id: "birthDate",
+        text: "תאריך לידה לועזי:",
+        fieldType: "datePicker",
+        maxDate: new Date(new Date().getFullYear() - 18, 0, 1)
     },
     {
-        text: "גיל",
+        id: "age",
+        text: "גיל:",
+        keyboardTypeOption: "numeric",
+        fieldType: "input",
+        editable: false,
+    },
+    {
+        id: "hight",
+        text: "גובה:",
         keyboardTypeOption: "numeric",
         fieldType: "input"
     },
     {
-        text: "עיר מגורים",
+        id: "city",
+        text: "עיר מגורים:",
         keyboardTypeOption: "default",
         fieldType: "input"
     },
     {
-        text: "שם של האבא",
+        id: "highSchoolName",
+        text: "שם של תיכון:",
         keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        text: "שם של תיכון",
-        keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        text: "שם של סמינר",
-        keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        text: "שם של האמא",
-        keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        text: "גובה",
-        keyboardTypeOption: "numeric",
-        fieldType: "input"
-    },
-    {
-        text: "מייל",
-        keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        text: "טלפון",
-        keyboardTypeOption: "numeric",
-        fieldType: "input"
-    },
-    {
-        text: "סוג נייד",
-        fieldType: "select",
-        handlePress: () => console.log(),
-        options: [
-            { id: 1, label: "כשר" },
-            { id: 2, label: "מוגן" },
-            { id: 3, label: "לא מוגן" }
+        fieldType: "input",
+        condition: [
+            { fieldId: "gender", value: "2" }
         ]
     },
     {
-        text: "סטטוס",
-        fieldType: "select",
-        handlePress: () => console.log(),
-        options: [
-            { id: 1, label: "רווק" },
-            { id: 2, label: "אלמן" },
-            { id: 3, label: "גרוש" },
-            { id: 4, label: "אלמן +" },
-            { id: 5, label: "גרוש +" }
+        id: "seminarName",
+        text: "שם של סמינר:",
+        keyboardTypeOption: "default",
+        fieldType: "input",
+        condition: [
+            { fieldId: "gender", value: "2" }
         ]
     },
     {
-        text: "מספר ילדים",
+        id: "mail",
+        text: "מייל:",
+        keyboardTypeOption: "default",
+        fieldType: "input"
+    },
+    {
+        id: "phone",
+        text: "טלפון:",
         keyboardTypeOption: "numeric",
         fieldType: "input"
     },
     {
-        text: "השקפה",
+        id: "typeOfPhone",
+        text: "סוג נייד:",
         fieldType: "select",
         handlePress: () => console.log(),
         options: [
-            { id: 1, label: "דתי" },
-            { id: 2, label: "חרדי" },
-            { id: 3, label: "חרדי מודרני" },
-            { id: 4, label: "חוזר בתשובה" }
+            { id: 1, name: "typeOfPhone", label: "כשר" },
+            { id: 2, name: "typeOfPhone", label: "מוגן" },
+            { id: 3, name: "typeOfPhone", label: "לא מוגן" }
         ]
     },
     {
-        text: "מעשן?",
+        id: "status",
+        text: "סטטוס:",
+        fieldType: "select",
+        handlePress: () => console.log(),
+        options: [
+            { id: 1, name: "status", label: "רווק/ה" },
+            { id: 2, name: "status", label: "אלמן/ה" },
+            { id: 3, name: "status", label: "גרוש/ה" },
+            { id: 4, name: "status", label: "אלמן/ה +" },
+            { id: 5, name: "status", label: "גרוש/ה +" }
+        ]
+    },
+    {
+        id: "countOfChildren",
+        text: "מספר ילדים:",
+        keyboardTypeOption: "numeric",
+        fieldType: "input",
+        condition: [
+            { fieldId: "status", value: "4" },
+            { fieldId: "status", value: "5" }
+        ]
+    },
+    {
+        id: "hashkafa",
+        text: "השקפה:",
+        fieldType: "select",
+        handlePress: () => console.log(),
+        options: [
+            { id: 1, name: "hashkafa", label: "דתי/ה" },
+            { id: 2, name: "hashkafa", label: "חרדי/ת" },
+            { id: 3, name: "hashkafa", label: "חרדי/ת מודרני/ת" },
+            { id: 4, name: "hashkafa", label: "חוזר/ת בתשובה" }
+        ]
+    },
+    {
+        id: "hozerBitshoveAge",
+        text: "מאיזה גיל חוזר בתשובה?",
+        keyboardTypeOption: "numeric",
+        fieldType: "input",
+        condition: [
+            { fieldId: "hashkafa", value: "4" },
+        ]
+    },
+    {
+        id: "moveLocation",
+        text: "מעוניין/ת להשאר ולגור בעיר מגוריי?",
         fieldType: "switch"
     },
     {
-        text: "רישיון?",
+        id: "smoker",
+        text: "מעשן/ת?",
         fieldType: "switch"
     },
     {
-        text: "כהן?",
+        id: "ger",
+        text: "מעוניין/ת בגר/ת צדק?",
         fieldType: "switch"
     },
     {
+        id: "hozerBitshuva",
+        text: "מעוניין/ת בחוזר/ת בתשובה?",
+        fieldType: "switch"
+    },
+    {
+        id: "drivingLicense",
+        text: "רישיון נהיגה?",
+        fieldType: "switch"
+    },
+    {
+        id: "cohen",
+        text: "את/ה כהן/ת?",
+        fieldType: "switch"
+    },
+    {
+        id: "whatWorks",
         text: "עיסוק",
         fieldType: "select",
         handlePress: () => console.log(),
         options: [
-            { id: 1, label: "בחור ישיבה" },
-            { id: 2, label: "אברך" },
-            { id: 3, label: "עובד" },
-            { id: 4, label: "סטודנט - לימודים אקדמיים" },
-            { id: 5, label: "חצי עובד חצי לומד - אקדמאי" },
-            { id: 6, label: "חצי עובד חצי לומד" }
-        ]
+            {
+                id: 1,
+                name: "whatWorks",
+                label: "בחור ישיבה",
+                isShow: [
+                    { fieldId: "gender", value: "1" }
+                ]
+            },
+            {
+                id: 2,
+                name: "whatWorks",
+                label: "אברך",
+                isShow: [
+                    { fieldId: "gender", value: "1" }
+                ]
+            },
+            {
+                id: 3,
+                name: "whatWorks",
+                label: "עובד/ת"
+            },
+            {
+                id: 4,
+                name: "whatWorks",
+                label: "סטודנט/ית - לימודים אקדמיים"
+            },
+            {
+                id: 5,
+                name: "whatWorks",
+                label: "חצי עובד/ת חצי לומד/ת - אקדמאי/ת"
+            },
+            {
+                id: 6,
+                name: "whatWorks",
+                label: "חצי עובד חצי לומד",
+                isShow: [
+                    { fieldId: "gender", value: "1" }
+                ]
+            }
+        ],
     },
     {
-        text: "השכלה",
-        fieldType: "select",
-        handlePress: () => console.log(),
-        options: [
-            { id: 1, label: "תואר" },
-            { id: 2, label: "הנדסאי" },
-            { id: 3, label: "בגרות" },
-            { id: 4, label: "ישיבה" }
-        ]
-    },
-    {
-        text: "מבנה גוף",
-        fieldType: "select",
-        handlePress: () => console.log(),
-        options: [
-            { id: 1, label: "רזה" },
-            { id: 2, label: "בריא" },
-            { id: 3, label: "מלא" }
-        ]
-    },
-    {
-        text: "צבע עור",
-        fieldType: "select",
-        handlePress: () => console.log(),
-        options: [
-            { id: 1, label: "בהיר" },
-            { id: 1, label: "בהיר" },
-            { id: 3, label: "לא משנה" }
-        ]
-    },
-    {
-        text: "סוג זקן",
-        fieldType: "select",
-        handlePress: () => console.log(),
-        options: [
-            { id: 1, label: "זקן - שלא נגעו בו" },
-            { id: 2, label: "זקן - מסודר" },
-            { id: 3, label: "זיפים" },
-            { id: 4, label: "מגולח" }
-        ]
-    },
-    {
-        text: "ישיבה קטנה",
+        id: "smallYeshiva",
+        text: "ישיבה קטנה:",
         keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        text: "ישיבה גדולה",
-        keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        text: "קיבוץ",
-        keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        text: "כולל",
-        keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        text: "מה לומד?",
-        keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        text: "לבוש",
-        fieldType: "select",
-        handlePress: () => console.log(),
-        options: [
-            { id: 1, label: "שחור לבן" },
-            { id: 2, label: "צבעוני" },
-            { id: 3, label: "צבעוני ובשבת שחור לבן" }
+        fieldType: "input",
+        condition: [
+            { fieldId: "whatWorks", value: "1" },
+            { fieldId: "gender", value: "1" }
         ]
     },
     {
-        text: "זרם",
-        fieldType: "select",
-        handlePress: () => console.log(),
-        options: [
-            { id: 1, label: "חסיד" },
-            { id: 2, label: "ליטאי" },
-            { id: 3, label: "ספרדי" }
+        id: "BigYeshiva",
+        text: "ישיבה גדולה:",
+        keyboardTypeOption: "default",
+        fieldType: "input",
+        condition: [
+            { fieldId: "gender", value: "1" },
+            { fieldId: "whatWorks", value: "1" },
         ]
     },
     {
+        id: "kibutz",
+        text: "קיבוץ:",
+        keyboardTypeOption: "default",
+        fieldType: "input",
+        condition: [
+            { fieldId: "whatWorks", value: "1" },
+            { fieldId: "gender", value: "1" }
+        ]
+    },
+    {
+        id: "colel",
+        text: "כולל:",
+        keyboardTypeOption: "default",
+        fieldType: "input",
+        condition: [
+            { fieldId: "gender", value: "1" },
+            { fieldId: "whatWorks", value: "2" },
+        ]
+    },
+    {
+        id: "nameOfWork",
+        text: "במה עובד/ת?",
+        keyboardTypeOption: "default",
+        fieldType: "input",
+        condition: [
+            { fieldId: "whatWorks", value: "3" },
+            { fieldId: "whatWorks", value: "5" },
+            { fieldId: "whatWorks", value: "6" }
+        ]
+    },
+    {
+        id: "whatLearning",
+        text: "מה לומד/ת?",
+        keyboardTypeOption: "default",
+        fieldType: "input",
+        condition: [
+            { fieldId: "whatWorks", value: "4" },
+            { fieldId: "whatWorks", value: "5" }
+        ]
+    },
+    {
+        id: "education",
+        text: "השכלה:",
+        fieldType: "checkbox",
+        handlePress: () => console.log(),
+        options: [
+            {
+                id: 1,
+                name: "education",
+                label: "תואר"
+            },
+            {
+                id: 2,
+                name: "education",
+                label: "הנדסאי/ת"
+            },
+            {
+                id: 3,
+                name: "education",
+                label: "בגרות",
+            },
+            {
+                id: 4,
+                name: "education",
+                label: "ישיבה",
+                isShow: [
+                    { fieldId: "gender", value: "1" },
+                    { fieldId: "whatWorks", value: "1" },
+                ]
+            }
+        ]
+    },
+    {
+        id: "bodyStructure",
+        text: "מבנה גוף:",
+        fieldType: "select",
+        handlePress: () => console.log(),
+        options: [
+            { id: 1, name: "bodyStructure", label: "רזה" },
+            { id: 2, name: "bodyStructure", label: "בריא/ה" },
+            { id: 3, name: "bodyStructure", label: "מלא/ה" }
+        ]
+    },
+    {
+        id: "skinColor",
+        text: "צבע עור:",
+        fieldType: "select",
+        handlePress: () => console.log(),
+        options: [
+            { id: 1, name: "skinColor", label: "בהיר/ה" },
+            { id: 2, name: "skinColor", label: "ממוצע - לא כהה ולא בהיר/ה" },
+            { id: 3, name: "skinColor", label: "כהה" }
+        ]
+    },
+    {
+        id: "beardType",
+        text: "סוג זקן:",
+        fieldType: "select",
+        handlePress: () => console.log(),
+        options: [
+            { id: 1, name: "beardType", label: "זקן - שלא נגעו בו" },
+            { id: 2, name: "beardType", label: "זקן - מסודר" },
+            { id: 3, name: "beardType", label: "זיפים" },
+            { id: 4, name: "beardType", label: "מגולח" }
+        ],
+        condition: [
+            { fieldId: "gender", value: "1" }
+        ]
+    },
+    {
+        id: "clothes",
+        text: "לבוש:",
+        fieldType: "select",
+        handlePress: () => console.log(),
+        options: [
+            { id: 1, name: "clothes", label: "שחור לבן" },
+            { id: 2, name: "clothes", label: "צבעוני" },
+            { id: 3, name: "clothes", label: "צבעוני ובשבת שחור לבן" }
+        ],
+        condition: [
+            { fieldId: "gender", value: "1" }
+        ]
+    },
+    {
+        id: "zerem",
+        text: "זרם:",
+        fieldType: "select",
+        handlePress: () => console.log(),
+        options: [
+            { id: 1, name: "zerem", label: "חסיד" },
+            { id: 2, name: "zerem", label: "ליטאי" },
+            { id: 3, name: "zerem", label: "ספרדי" }
+        ]
+    },
+    {
+        id: "hasidut",
         text: "זרם חסידות?",
         keyboardTypeOption: "default",
         fieldType: "input"
     },
     {
+        id: "tribe",
         text: "עדה?",
         keyboardTypeOption: "default",
         fieldType: "input"
     },
     {
+        id: "fatherName",
+        text: "שם של האבא:",
+        keyboardTypeOption: "default",
+        fieldType: "input"
+    },
+    {
+        id: "motherName",
+        text: "שם של האמא:",
+        keyboardTypeOption: "default",
+        fieldType: "input"
+    },
+    {
+        id: "rabbiName",
         text: "מי הרב שלי?",
         keyboardTypeOption: "default",
         fieldType: "input"
     },
     {
+        id: "importantInfo",
         text: "קצת עלי...",
         keyboardTypeOption: "default",
         fieldType: "input",
         multiline: true
     },
     {
+        id: "familyInfo",
         text: "קצת על המשפחה",
         keyboardTypeOption: "default",
         fieldType: "input",
         multiline: true
     },
     {
-        text: "טלפונים לברורים",
+        id: "phonesForInquiries",
+        text: "טלפונים לברורים:",
         keyboardTypeOption: "default",
         fieldType: "input",
         multiline: true

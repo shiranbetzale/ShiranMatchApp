@@ -3,6 +3,6 @@ import { FontsStyle } from "../../utils/FontsStyle";
 
 export const styles = StyleSheet.create({
     text: {
-        ...FontsStyle.text
+        ...FontsStyle.subTitle
     }
 });

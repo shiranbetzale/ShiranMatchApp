@@ -8,32 +8,53 @@ import CustomSwitch from "../components/CustomSwitch/CustomSwitch";
 import { FormField } from "./FormFields.type";
 
 const generateField = (props: FormField) => {
-    const { minRange, maxRange, step, multiline, text, keyboardTypeOption, fieldType, options, handlePress = () => { } } = props;
+    const { maxDate, editable, minRange, maxRange, step, multiline, text, keyboardTypeOption, fieldType, options, handlePress = () => { } } = props;
 
     switch (fieldType) {
         case "input":
-            return <CustomInput multiline={multiline} placeholder={text} keyboardType={keyboardTypeOption || "default"} />
+            return <CustomInput
+                multiline={multiline}
+                placeholder={text}
+                editable={editable}
+                keyboardType={keyboardTypeOption || "default"}
+            />
 
         case "radioButton":
-            return <CustomRadioButton text={text} radiosArray={options || []} onSelect={handlePress} />
+            return <CustomRadioButton
+                text={text}
+                radiosArray={options || []}
+                onSelect={handlePress} />
 
         case "datePicker":
-            return <CustomDatePicker text={text} />
+            return <CustomDatePicker
+                text={text}
+                maxDate={maxDate}
+            />
 
         case "select":
             return <CustomSelect
                 text={text}
                 onSelect={handlePress}
-                options={options || []} />
+                options={options || []}
+            />
 
         case "switch":
-            return <CustomSwitch text={text} />
+            return <CustomSwitch
+                text={text} />
 
         case "checkbox":
-            return <CustomCheckBox text={text} options={options || []} />
+            return <CustomCheckBox
+                text={text}
+                options={options || []}
+            />
 
         case "range":
-            return <CustomRange text={text} step={step || 0} minRange={minRange || 0} maxRange={maxRange || 0} />
+            return <CustomRange
+                text={text}
+                step={step || 0}
+                minRange={minRange || 0}
+                maxRange={maxRange || 0}
+            />
 
         default:
             break;

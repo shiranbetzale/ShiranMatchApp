@@ -15,6 +15,12 @@ export const FontsStyle = StyleSheet.create({
         color: Colors.btn,
         fontSize: 24,
     },
+    subTitle: {
+        fontFamily: fontFamily.bold,
+        textAlign: "right",
+        color: Colors.black,
+        fontSize: 16,
+    },
     text: {
         fontFamily: fontFamily.regular,
         textAlign: "right",

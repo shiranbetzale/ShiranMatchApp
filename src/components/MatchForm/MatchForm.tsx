@@ -1,9 +1,6 @@
 
 import React from 'react';
-import { View } from 'react-native';
-import CustomButton from '../../components/CustomButton/CustomButton';
 import WhiteCard from '../../components/WhiteCard/WhiteCard';
-import { WizardType } from '../../components/Wizard/Wizard.type';
 import generateField from '../../utils/GenerateField';
 import matchFormArray from '../../utils/MatchFormFields';
 import { styles } from './MatchForm.style';

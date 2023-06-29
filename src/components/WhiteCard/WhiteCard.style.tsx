@@ -9,5 +9,6 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 10,
     ...Colors.Shadow,
+    opacity: 0.85,
   }
 });

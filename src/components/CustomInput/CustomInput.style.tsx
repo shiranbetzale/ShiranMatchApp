@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import Colors from "../../utils/Colors";
+import { FontsStyle } from "../../utils/FontsStyle";
 
 export const styles = StyleSheet.create({
   input: {
@@ -9,7 +10,9 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     width: 120,
-    borderColor: Colors.border
+    borderColor: Colors.border,
+    borderRadius: 4,
+    ...FontsStyle.text
   },
   textArea: {
     height: 140,

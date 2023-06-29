@@ -12,7 +12,10 @@ const CustomSwitch = (props: CustomSwitchType) => {
 
   return (
     <View style={styles.container}>
-      <CustomText text={text} />
+      <CustomText
+        text={text}
+        customStyle={styles.text}
+      />
       <Switch
         trackColor={{ false: Colors.black, true: Colors.border }}
         thumbColor={isEnabled ? Colors.btn : Colors.white}
