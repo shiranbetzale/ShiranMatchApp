@@ -5,4 +5,5 @@ export type CustomInputType = {
   keyboardType: KeyboardTypeOptions;
   multiline?: boolean;
   editable?: boolean;
+  defaultValue?: string | number;
 };

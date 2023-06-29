@@ -12,7 +12,7 @@ export type Condition = {
 
 export type FormField = {
     id: string;
-    defaultValue?: string | number | Date;
+    defaultValue?: string | number;
     text: string;
     multiline?: boolean;
     editable?: boolean;

@@ -5,9 +5,10 @@ import { styles } from './CustomInput.style';
 import { CustomInputType } from './CustomInput.type';
 
 const CustomInput = (props: CustomInputType) => {
-  const { placeholder, keyboardType, multiline = false, editable = true } = props;
+  const { defaultValue = '', placeholder, keyboardType, multiline = false, editable = true } = props;
 
   const [text, onChangeText] = useState<string>('');
+  const defaultValueStr = defaultValue?.toString();
 
   return (
     <View style={[styles.container, multiline && styles.textAreaContainer]}>
@@ -15,7 +16,7 @@ const CustomInput = (props: CustomInputType) => {
       <TextInput
         style={[styles.input, multiline && styles.textArea]}
         onChangeText={onChangeText}
-        value={text}
+        value={!editable ? defaultValueStr : text}
         keyboardType={keyboardType}
         multiline={multiline}
         editable={editable}

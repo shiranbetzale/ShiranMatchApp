@@ -1,4 +1,5 @@
 import { FormField } from "./FormFields.type";
+import { calculateAge, getDateBefore } from "./generalFunction";
 
 const detailsFormArray: FormField[] = [
     {
@@ -33,7 +34,7 @@ const detailsFormArray: FormField[] = [
         id: "birthDate",
         text: "תאריך לידה לועזי:",
         fieldType: "datePicker",
-        maxDate: new Date(new Date().getFullYear() - 18, 0, 1)
+        maxDate: getDateBefore(18)
     },
     {
         id: "age",
@@ -41,6 +42,7 @@ const detailsFormArray: FormField[] = [
         keyboardTypeOption: "numeric",
         fieldType: "input",
         editable: false,
+        defaultValue: calculateAge(new Date)
     },
     {
         id: "hight",
