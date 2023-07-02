@@ -11,16 +11,17 @@ export const styles = StyleSheet.create({
   optionsContainer: {
     alignContent: "center",
     flexDirection: "row-reverse",
-    alignItems: "center"
+    alignItems: "center",
+    marginBottom: 10
   },
   circle: {
-    width: 12,
-    height: 12,
-    borderRadius: 6,
+    width: 30,
+    height: 30,
+    borderRadius: 15,
     backgroundColor: Colors.white,
     marginLeft: 10,
     borderColor: Colors.black,
-    borderWidth: 1,
+    borderWidth: 2,
   },
   selectedCircle: {
     backgroundColor: Colors.border,
