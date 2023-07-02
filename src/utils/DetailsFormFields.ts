@@ -377,13 +377,19 @@ const detailsFormArray: FormField[] = [
         id: "hasidut",
         text: "זרם חסידות?",
         keyboardTypeOption: "default",
-        fieldType: "input"
+        fieldType: "input",
+        condition: [
+            { fieldId: "zerem", value: "1" }
+        ]
     },
     {
         id: "tribe",
         text: "עדה?",
         keyboardTypeOption: "default",
-        fieldType: "input"
+        fieldType: "input",
+        condition: [
+            { fieldId: "zerem", value: "3" }
+        ]
     },
     {
         id: "fatherName",

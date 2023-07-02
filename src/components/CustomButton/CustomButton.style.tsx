@@ -18,4 +18,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 10,
   },
+  disabled: {
+    opacity: 0.3
+  }
 });

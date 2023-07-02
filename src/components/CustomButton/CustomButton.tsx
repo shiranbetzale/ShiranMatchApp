@@ -9,7 +9,7 @@ const CustomButton = (props: CustomButtonType) => {
 
   return (
     <TouchableOpacity
-      style={[styles.button, { ...customStyle }]}
+      style={[styles.button, { ...customStyle }, disabled && styles.disabled]}
       onPress={onPress} disabled={disabled}
     >
       {text &&

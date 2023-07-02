@@ -15,8 +15,6 @@ export const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: Colors.darkGreen,
   },
-  btn: {
-  },
   containerDynamicComp: {
     alignItems: "stretch",
     width: '100%'

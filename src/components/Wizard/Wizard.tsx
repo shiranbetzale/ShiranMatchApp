@@ -24,7 +24,6 @@ const Wizard = (props: WizardType) => {
           disabled={wizardStep <= 1}
           text='הקודם'
           onPress={() => { setWizarsStep(wizardStep - 1) }}
-          customStyle={styles.btn}
         />
         <CustomText
           customStyle={FontsStyle.title}
@@ -34,7 +33,6 @@ const Wizard = (props: WizardType) => {
           disabled={wizardStep >= wizardSteps.length}
           text='הבא'
           onPress={() => { setWizarsStep(wizardStep + 1) }}
-          customStyle={styles.btn}
         />
       </View>
       <ImageBackground
