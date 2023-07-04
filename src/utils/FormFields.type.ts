@@ -15,8 +15,8 @@ export type FormField = {
     collapseTitle?: string;
     defaultValue?: string | number;
     text: string;
-    multiline?: boolean;
-    editable?: boolean;
+    isMultiline?: boolean;
+    isEditable?: boolean;
     keyboardTypeOption?: "default" | "numeric";
     fieldType: "checkbox" | "range" | "input" | "select" | "datePicker" | "switch" | "radioButton";
     options?: Option[];

@@ -35,12 +35,10 @@ const Step1Screen = () => {
   }
 
   return (
-    <>
-      <CustomCollapse
-        sections={detailsFormArrayFiltered}
-        handlePress={handlePress}
-      />
-    </>
+    <CustomCollapse
+      sections={detailsFormArrayFiltered}
+      handlePress={handlePress}
+    />
 
     // {/* במידה ויש ילדים */}
     // <>

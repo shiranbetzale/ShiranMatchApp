@@ -8,15 +8,16 @@ import CustomSwitch from "../components/CustomSwitch/CustomSwitch";
 import { FormField } from "./FormFields.type";
 
 const generateField = (props: FormField) => {
-    const { defaultValue, maxDate, editable, minRange, maxRange, step, multiline, text, keyboardTypeOption, fieldType, options, handlePress = () => { } } = props;
+    const { defaultValue, maxDate, isEditable, minRange, maxRange, step, isMultiline, text, keyboardTypeOption, fieldType, options, handlePress = () => { } } = props;
 
     switch (fieldType) {
         case "input":
             return <CustomInput
-                multiline={multiline}
+                isMaxWidth={true}
+                isMultiline={isMultiline}
                 defaultValue={defaultValue}
                 placeholder={text}
-                editable={editable}
+                isEditable={isEditable}
                 keyboardType={keyboardTypeOption || "default"}
             />
 

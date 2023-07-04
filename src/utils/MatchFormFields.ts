@@ -7,7 +7,8 @@ const matchFormArray: FormField[] = [
         fieldType: "range",
         minRange: 18,
         maxRange: 90,
-        step: 1
+        step: 1,
+        collapseTitle: "פרטים כלליים"
     },
     {
         id: "matchCountOfChildren",
@@ -15,7 +16,8 @@ const matchFormArray: FormField[] = [
         fieldType: "range",
         minRange: 0,
         maxRange: 10,
-        step: 1
+        step: 1,
+        collapseTitle: "פרטים כלליים"
     },
     {
         id: "matchRangeHights",
@@ -23,7 +25,8 @@ const matchFormArray: FormField[] = [
         fieldType: "range",
         minRange: 120,
         maxRange: 200,
-        step: 1
+        step: 1,
+        collapseTitle: "פרטים כלליים"
     },
     {
         id: "matchArea",
@@ -36,7 +39,8 @@ const matchFormArray: FormField[] = [
             { id: 3, name: "matchArea", label: "צפון והסביבה" },
             { id: 4, name: "matchArea", label: "ירושלים והסביבה" },
             { id: 5, name: "matchArea", label: "השפלה והסביבה" }
-        ]
+        ],
+        collapseTitle: "פרטים כלליים"
     },
     {
         id: "matchTypeOfPhone",
@@ -47,7 +51,8 @@ const matchFormArray: FormField[] = [
             { id: 1, name: "matchTypeOfPhone", label: "כשר" },
             { id: 2, name: "matchTypeOfPhone", label: "מוגן" },
             { id: 3, name: "matchTypeOfPhone", label: "לא מוגן" },
-        ]
+        ],
+        collapseTitle: "פרטים כלליים"
     },
     {
         id: "matchStatus",
@@ -60,7 +65,8 @@ const matchFormArray: FormField[] = [
             { id: 3, name: "matchStatus", label: "גרוש" },
             { id: 4, name: "matchStatus", label: "אלמן +" },
             { id: 5, name: "matchStatus", label: "גרוש +" }
-        ]
+        ],
+        collapseTitle: "פרטים כלליים"
     },
     {
         id: "matchHashkafa",
@@ -72,22 +78,38 @@ const matchFormArray: FormField[] = [
             { id: 2, name: "matchHashkafa", label: "חרדי" },
             { id: 3, name: "matchHashkafa", label: "חרדי מודרני" },
             { id: 4, name: "matchHashkafa", label: "חוזר בתשובה" }
-        ]
+        ],
+        collapseTitle: "סגנון"
     },
     {
-        id: "matchSmoker",
-        text: "מעשן?",
-        fieldType: "switch"
+        id: "matchIsWantSmoker",
+        text: "מוכן/ה לשמוע על מישהו/י שמעשן?",
+        fieldType: "switch",
+        collapseTitle: "פרטים כלליים"
     },
     {
-        id: "matchCohen",
-        text: "כהן?",
-        fieldType: "switch"
+        id: "matchIsWantCohen",
+        text: "מוכן/ה לשמוע על כהן?",
+        fieldType: "switch",
+        collapseTitle: "פרטים כלליים"
     },
     {
-        id: "matchDrivingLicense",
-        text: "רישיון?",
-        fieldType: "switch"
+        id: "matchIsWantNationalService",
+        text: "מוכן/ה לשמוע על מישהי שעשתה שירות לאומי?",
+        fieldType: "switch",
+        collapseTitle: "פרטים כלליים"
+    },
+    {
+        id: "matchIsWantArmy",
+        text: "מוכן/ה לשמוע על מישהו/י ששירת/ה בצבא?",
+        fieldType: "switch",
+        collapseTitle: "פרטים כלליים"
+    },
+    {
+        id: "matchIsDrivingLicense",
+        text: "מוכן/ה לשמוע על מישהו/י עם רישיון?",
+        fieldType: "switch",
+        collapseTitle: "פרטים כלליים"
     },
     {
         id: "matchWhatWorks",
@@ -101,7 +123,8 @@ const matchFormArray: FormField[] = [
             { id: 4, name: "matchWhatWorks", label: "סטודנט - לימודים אקדמיים" },
             { id: 5, name: "matchWhatWorks", label: "חצי עובד חצי לומד - אקדמאי" },
             { id: 6, name: "matchWhatWorks", label: "חצי עובד חצי לומד" }
-        ]
+        ],
+        collapseTitle: "עיסוק והשכלה"
     },
     {
         id: "matchEducation",
@@ -113,7 +136,8 @@ const matchFormArray: FormField[] = [
             { id: 2, name: "matchEducation", label: "הנדסאי" },
             { id: 3, name: "matchEducation", label: "בגרות" },
             { id: 4, name: "matchEducation", label: "ישיבה" }
-        ]
+        ],
+        collapseTitle: "עיסוק והשכלה"
     },
     {
         id: "matchBodyStructure",
@@ -124,7 +148,8 @@ const matchFormArray: FormField[] = [
             { id: 1, name: "matchBodyStructure", label: "רזה" },
             { id: 2, name: "matchBodyStructure", label: "בריא" },
             { id: 3, name: "matchBodyStructure", label: "מלא" }
-        ]
+        ],
+        collapseTitle: "מראה חיצוני"
     },
     {
         id: "matchSkinColor",
@@ -134,7 +159,8 @@ const matchFormArray: FormField[] = [
         options: [
             { id: 1, name: "matchSkinColor", label: "בהיר" },
             { id: 2, name: "matchSkinColor", label: "כהה" }
-        ]
+        ],
+        collapseTitle: "מראה חיצוני"
     },
     {
         id: "matchBeardType",
@@ -146,7 +172,8 @@ const matchFormArray: FormField[] = [
             { id: 2, name: "matchSkinColor", label: "זקן - מסודר" },
             { id: 3, name: "matchSkinColor", label: "זיפים" },
             { id: 4, name: "matchSkinColor", label: "מגולח" }
-        ]
+        ],
+        collapseTitle: "מראה חיצוני"
     },
     {
         id: "matchClothes",
@@ -157,7 +184,8 @@ const matchFormArray: FormField[] = [
             { id: 1, name: "matchClothes", label: "שחור לבן" },
             { id: 2, name: "matchClothes", label: "צבעוני" },
             { id: 3, name: "matchClothes", label: "צבעוני ובשבת שחור לבן" }
-        ]
+        ],
+        collapseTitle: "מראה חיצוני"
     },
     {
         id: "matchZerem",
@@ -168,26 +196,30 @@ const matchFormArray: FormField[] = [
             { id: 1, name: "matchZerem", label: "חסיד" },
             { id: 2, name: "matchZerem", label: "ליטאי" },
             { id: 3, name: "matchZerem", label: "ספרדי" }
-        ]
+        ],
+        collapseTitle: "פרטים נוספים"
     },
     {
         id: "matchHasidut",
         text: "זרם חסידות?",
         keyboardTypeOption: "default",
-        fieldType: "input"
+        fieldType: "input",
+        collapseTitle: "פרטים נוספים"
     },
     {
         id: "matchTribe",
         text: "עדיפות לעדה מסויימת?",
         keyboardTypeOption: "default",
-        fieldType: "input"
+        fieldType: "input",
+        collapseTitle: "פרטים נוספים"
     },
     {
         id: "matchImportantInfo",
         text: "מה חשוב לי בבן/ת הזוג שלי?",
         keyboardTypeOption: "default",
         fieldType: "input",
-        multiline: true
+        isMultiline: true,
+        collapseTitle: "פרטים נוספים"
     }
 ]
 

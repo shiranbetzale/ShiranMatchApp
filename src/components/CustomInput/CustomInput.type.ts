@@ -3,7 +3,8 @@ import { KeyboardTypeOptions } from "react-native";
 export type CustomInputType = {
   placeholder: string;
   keyboardType: KeyboardTypeOptions;
-  multiline?: boolean;
-  editable?: boolean;
+  isMultiline?: boolean;
+  isEditable?: boolean;
   defaultValue?: string | number;
+  isMaxWidth?: boolean;
 };

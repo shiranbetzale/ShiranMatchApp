@@ -8,7 +8,7 @@ type WizarsStep = {
 }
 
 export type WizardBtnType = {
-    btnDis?: boolean;
+    isBtnDis?: boolean;
     btnTxt: string;
     btnFunc: () => void;
 }

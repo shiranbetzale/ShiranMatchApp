@@ -173,37 +173,37 @@ const detailsFormArray: FormField[] = [
         collapseTitle: "סגנון"
     },
     {
-        id: "ger",
+        id: "isGer",
         text: "מעוניין/ת בגר/ת צדק?",
         fieldType: "switch",
         collapseTitle: "סגנון"
     },
     {
-        id: "hozerBitshuva",
+        id: "isHozerBitshuva",
         text: "מעוניין/ת בחוזר/ת בתשובה?",
         fieldType: "switch",
         collapseTitle: "סגנון"
     },
     {
-        id: "moveLocation",
+        id: "isStayInCurrentLocation",
         text: "מעוניין/ת להשאר ולגור בעיר מגוריי?",
         fieldType: "switch",
         collapseTitle: "פרטים כלליים"
     },
     {
-        id: "smoker",
+        id: "isSmoker",
         text: "מעשן/ת?",
         fieldType: "switch",
         collapseTitle: "פרטים כלליים"
     },
     {
-        id: "drivingLicense",
+        id: "isHasDrivingLicense",
         text: "רישיון נהיגה?",
         fieldType: "switch",
         collapseTitle: "פרטים כלליים"
     },
     {
-        id: "cohen",
+        id: "isCohen",
         text: "את/ה כהן/ת?",
         fieldType: "switch",
         collapseTitle: "פרטים כלליים"
