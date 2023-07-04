@@ -6,16 +6,18 @@ import { styles } from "./CustomSwitch.style";
 import { CustomSwitchType } from "./CustomSwitch.type";
 
 const CustomSwitch = (props: CustomSwitchType) => {
-  const { text } = props;
+  const { text, isMaxWidth = false } = props;
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
   return (
     <View style={styles.container}>
-      <CustomText
-        text={text}
-        customStyle={styles.text}
-      />
+      <View style={isMaxWidth && styles.maxWidth}>
+        <CustomText
+          text={text}
+          customStyle={styles.text}
+        />
+      </View>
       <Switch
         trackColor={{ false: Colors.black, true: Colors.border }}
         thumbColor={isEnabled ? Colors.btn : Colors.white}

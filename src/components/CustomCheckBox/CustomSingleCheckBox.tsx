@@ -4,6 +4,7 @@ import { styles } from "./CustomCheckBox.style";
 import CustomText from "../CustomText/CustomText";
 import Colors from "../../utils/Colors";
 import { Option } from "../../utils/FormFields.type";
+import { FontsStyle } from "../../utils/FontsStyle";
 
 const CustomSingleCheckBox = (props: Option) => {
   const { id, label } = props;
@@ -12,7 +13,7 @@ const CustomSingleCheckBox = (props: Option) => {
 
   return (
     < >
-      <CustomText text={label} />
+      <CustomText text={label} customStyle={FontsStyle.text} />
       <CheckBox
         // hideBox={true}
         boxType="square"

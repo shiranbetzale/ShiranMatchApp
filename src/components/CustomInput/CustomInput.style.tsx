@@ -28,5 +28,8 @@ export const styles = StyleSheet.create({
   textAreaContainer: {
     alignItems: "flex-end",
     flexDirection: "column",
+  },
+  maxWidth: {
+    maxWidth: 150
   }
 });

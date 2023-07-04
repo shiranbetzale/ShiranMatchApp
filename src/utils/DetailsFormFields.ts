@@ -46,7 +46,7 @@ const detailsFormArray: FormField[] = [
         text: "גיל:",
         keyboardTypeOption: "numeric",
         fieldType: "input",
-        editable: false,
+        isEditable: false,
         defaultValue: calculateAge(new Date),
         collapseTitle: "פרטים אישיים"
     },
@@ -522,7 +522,7 @@ const detailsFormArray: FormField[] = [
         text: "קצת עלי...",
         keyboardTypeOption: "default",
         fieldType: "input",
-        multiline: true,
+        isMultiline: true,
         collapseTitle: "פרטים נוספים"
     },
     {
@@ -530,7 +530,7 @@ const detailsFormArray: FormField[] = [
         text: "קצת על המשפחה",
         keyboardTypeOption: "default",
         fieldType: "input",
-        multiline: true,
+        isMultiline: true,
         collapseTitle: "פרטים נוספים"
     },
     {
@@ -538,7 +538,7 @@ const detailsFormArray: FormField[] = [
         text: "טלפונים לברורים:",
         keyboardTypeOption: "default",
         fieldType: "input",
-        multiline: true,
+        isMultiline: true,
         collapseTitle: "פרטים נוספים"
     },
 ];

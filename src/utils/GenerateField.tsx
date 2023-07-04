@@ -42,6 +42,7 @@ const generateField = (props: FormField) => {
 
         case "switch":
             return <CustomSwitch
+                isMaxWidth={true}
                 text={text} />
 
         case "checkbox":

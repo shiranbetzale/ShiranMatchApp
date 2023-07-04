@@ -9,5 +9,8 @@ export const styles = StyleSheet.create({
   },
   text: {
     marginLeft: 10
+  },
+  maxWidth: {
+    maxWidth: 200
   }
 });
