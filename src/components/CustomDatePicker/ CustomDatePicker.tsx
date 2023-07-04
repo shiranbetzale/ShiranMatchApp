@@ -34,7 +34,7 @@ const CustomDatePicker = (props: CustomDatePickerType) => {
           onConfirm={(date) => {
             setOpen(false)
             setDate(date)
-            console.log(date);
+            // console.log(date);
           }}
           onCancel={() => {
             setOpen(false)

@@ -6,7 +6,6 @@ import { CustomInputType } from './CustomInput.type';
 
 const CustomInput = (props: CustomInputType) => {
   const { defaultValue = '', placeholder, keyboardType, multiline = false, editable = true } = props;
-
   const [text, onChangeText] = useState<string>('');
   const defaultValueStr = defaultValue?.toString();
 

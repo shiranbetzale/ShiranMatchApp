@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { styles } from './Wizard.style';
-import { WizardType } from './Wizard.type';
-import CustomButton from '../CustomButton/CustomButton';
-import { ImageBackground, View, ScrollView } from 'react-native';
-import CustomText from '../CustomText/CustomText';
+import { WizardBtnType, WizardTxtType, WizardType } from './Wizard.type';
+import { View, ScrollView } from 'react-native';
 import { FontsStyle } from '../../utils/FontsStyle';
+import WizardHeader from './WizardHeader';
+import CustomImageBg from '../CustomImageBg/CustomImageBg';
 
 const Wizard = (props: WizardType) => {
   const { wizardSteps = [] } = props;
@@ -17,35 +17,38 @@ const Wizard = (props: WizardType) => {
     return <SpecificStep />;
   }
 
+  const btnAProps: WizardBtnType = {
+    btnDis: wizardStep <= 1,
+    btnTxt: "הקודם",
+    btnFunc: () => setWizarsStep(wizardStep - 1)
+  }
+
+  const btnBProps: WizardBtnType = {
+    btnDis: wizardStep >= wizardSteps.length,
+    btnTxt: "הבא",
+    btnFunc: () => setWizarsStep(wizardStep + 1)
+  }
+
+  const txtProps: WizardTxtType = {
+    customStyle: FontsStyle.title,
+    text: wizardSteps.find((step) => step.id === wizardStep)?.title
+  }
+
   return (
     <View style={styles.container}>
-      <View style={styles.wizardContainer}>
-        <CustomButton
-          disabled={wizardStep <= 1}
-          text='הקודם'
-          onPress={() => { setWizarsStep(wizardStep - 1) }}
-        />
-        <CustomText
-          customStyle={FontsStyle.title}
-          text={wizardSteps.find((step) => step.id === wizardStep)?.title}
-        />
-        <CustomButton
-          disabled={wizardStep >= wizardSteps.length}
-          text='הבא'
-          onPress={() => { setWizarsStep(wizardStep + 1) }}
-        />
-      </View>
-      <ImageBackground
-        source={require(image)}
-        resizeMode="cover"
-        style={styles.image}>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic">
-          <View style={styles.containerDynamicComp}>
-            {renderComp()}
-          </View>
-        </ScrollView>
-      </ImageBackground>
+      <WizardHeader
+        btnAProps={btnAProps}
+        btnBProps={btnBProps}
+        textProps={txtProps}
+      />
+      <CustomImageBg
+        src={require(image)}
+        customImgStyle={styles.image}
+      >
+        <View style={styles.containerDynamicComp}>
+          {renderComp()}
+        </View>
+      </CustomImageBg>
     </View>
   );
 };

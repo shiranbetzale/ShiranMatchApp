@@ -1,3 +1,5 @@
+import { TextStyle } from "react-native";
+
 type WizarsStep = {
     id: number;
     name: string;
@@ -5,7 +7,23 @@ type WizarsStep = {
     comp: any;
 }
 
+export type WizardBtnType = {
+    btnDis?: boolean;
+    btnTxt: string;
+    btnFunc: () => void;
+}
+
+export type WizardTxtType = {
+    customStyle?: TextStyle,
+    text?: string;
+}
+
+export type WizardHeaderType = {
+    btnAProps: WizardBtnType;
+    btnBProps: WizardBtnType;
+    textProps: WizardTxtType;
+};
+
 export type WizardType = {
-    // navigation: any;
     wizardSteps: WizarsStep[];
 };

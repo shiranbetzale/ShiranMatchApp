@@ -7,12 +7,14 @@ const detailsFormArray: FormField[] = [
         text: "תעודת זהות:",
         keyboardTypeOption: "numeric",
         fieldType: "input",
+        collapseTitle: "פרטים אישיים",
     },
     {
         id: "fullName",
         text: "שם מלא:",
         keyboardTypeOption: "default",
-        fieldType: "input"
+        fieldType: "input",
+        collapseTitle: "פרטים אישיים"
     },
     {
         id: "gender",
@@ -22,19 +24,22 @@ const detailsFormArray: FormField[] = [
             { id: 2, name: "gender", label: "נקבה" }
         ],
         fieldType: "radioButton",
-        handlePress: () => { }
+        handlePress: () => { },
+        collapseTitle: "פרטים אישיים"
     },
     {
         id: "birthDateHe",
         text: "תאריך לידה עברי:",
         keyboardTypeOption: "default",
-        fieldType: "input"
+        fieldType: "input",
+        collapseTitle: "פרטים אישיים"
     },
     {
         id: "birthDate",
         text: "תאריך לידה לועזי:",
         fieldType: "datePicker",
-        maxDate: getDateBefore(18)
+        maxDate: getDateBefore(18),
+        collapseTitle: "פרטים אישיים"
     },
     {
         id: "age",
@@ -42,60 +47,22 @@ const detailsFormArray: FormField[] = [
         keyboardTypeOption: "numeric",
         fieldType: "input",
         editable: false,
-        defaultValue: calculateAge(new Date)
+        defaultValue: calculateAge(new Date),
+        collapseTitle: "פרטים אישיים"
     },
     {
         id: "hight",
         text: "גובה:",
         keyboardTypeOption: "numeric",
-        fieldType: "input"
+        fieldType: "input",
+        collapseTitle: "פרטים אישיים"
     },
     {
         id: "city",
         text: "עיר מגורים:",
         keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        id: "highSchoolName",
-        text: "שם של תיכון:",
-        keyboardTypeOption: "default",
         fieldType: "input",
-        condition: [
-            { fieldId: "gender", value: "2" }
-        ]
-    },
-    {
-        id: "seminarName",
-        text: "שם של סמינר:",
-        keyboardTypeOption: "default",
-        fieldType: "input",
-        condition: [
-            { fieldId: "gender", value: "2" }
-        ]
-    },
-    {
-        id: "mail",
-        text: "מייל:",
-        keyboardTypeOption: "default",
-        fieldType: "input"
-    },
-    {
-        id: "phone",
-        text: "טלפון:",
-        keyboardTypeOption: "numeric",
-        fieldType: "input"
-    },
-    {
-        id: "typeOfPhone",
-        text: "סוג נייד:",
-        fieldType: "select",
-        handlePress: () => console.log(),
-        options: [
-            { id: 1, name: "typeOfPhone", label: "כשר" },
-            { id: 2, name: "typeOfPhone", label: "מוגן" },
-            { id: 3, name: "typeOfPhone", label: "לא מוגן" }
-        ]
+        collapseTitle: "פרטים אישיים"
     },
     {
         id: "status",
@@ -108,7 +75,8 @@ const detailsFormArray: FormField[] = [
             { id: 3, name: "status", label: "גרוש/ה" },
             { id: 4, name: "status", label: "אלמן/ה +" },
             { id: 5, name: "status", label: "גרוש/ה +" }
-        ]
+        ],
+        collapseTitle: "פרטים אישיים"
     },
     {
         id: "countOfChildren",
@@ -118,7 +86,68 @@ const detailsFormArray: FormField[] = [
         condition: [
             { fieldId: "status", value: "4" },
             { fieldId: "status", value: "5" }
-        ]
+        ],
+        collapseTitle: "פרטים אישיים"
+    },
+    {
+        id: "typeOfHeadCover",
+        text: "כיסוי ראש:",
+        fieldType: "select",
+        handlePress: () => console.log(),
+        options: [
+            {
+                id: 1, name: "typeOfHeadCover", label: "כיפה שחורה", isShow: [
+                    { fieldId: "gender", value: "1" }
+                ]
+            },
+            {
+                id: 2, name: "typeOfHeadCover", label: "כיפה סרוגה", isShow: [
+                    { fieldId: "gender", value: "1" }
+                ]
+            },
+            {
+                id: 3, name: "typeOfHeadCover", label: "מטפחת", isShow: [
+                    { fieldId: "gender", value: "2" }
+                ]
+            },
+            {
+                id: 4, name: "typeOfHeadCover", label: "פאה", isShow: [
+                    { fieldId: "gender", value: "2" }
+                ]
+            },
+            {
+                id: 5, name: "typeOfHeadCover", label: "מטפחת ופאה", isShow: [
+                    { fieldId: "gender", value: "2" }
+                ]
+            },
+        ],
+        collapseTitle: "פרטים אישיים"
+    },
+    {
+        id: "phone",
+        text: "טלפון:",
+        keyboardTypeOption: "numeric",
+        fieldType: "input",
+        collapseTitle: "פרטי קשר"
+    },
+    {
+        id: "typeOfPhone",
+        text: "סוג נייד:",
+        fieldType: "select",
+        handlePress: () => console.log(),
+        options: [
+            { id: 1, name: "typeOfPhone", label: "כשר" },
+            { id: 2, name: "typeOfPhone", label: "מוגן" },
+            { id: 3, name: "typeOfPhone", label: "לא מוגן" }
+        ],
+        collapseTitle: "פרטי קשר"
+    },
+    {
+        id: "mail",
+        text: "מייל:",
+        keyboardTypeOption: "default",
+        fieldType: "input",
+        collapseTitle: "פרטי קשר"
     },
     {
         id: "hashkafa",
@@ -130,7 +159,8 @@ const detailsFormArray: FormField[] = [
             { id: 2, name: "hashkafa", label: "חרדי/ת" },
             { id: 3, name: "hashkafa", label: "חרדי/ת מודרני/ת" },
             { id: 4, name: "hashkafa", label: "חוזר/ת בתשובה" }
-        ]
+        ],
+        collapseTitle: "סגנון"
     },
     {
         id: "hozerBitshoveAge",
@@ -139,37 +169,96 @@ const detailsFormArray: FormField[] = [
         fieldType: "input",
         condition: [
             { fieldId: "hashkafa", value: "4" },
-        ]
-    },
-    {
-        id: "moveLocation",
-        text: "מעוניין/ת להשאר ולגור בעיר מגוריי?",
-        fieldType: "switch"
-    },
-    {
-        id: "smoker",
-        text: "מעשן/ת?",
-        fieldType: "switch"
+        ],
+        collapseTitle: "סגנון"
     },
     {
         id: "ger",
         text: "מעוניין/ת בגר/ת צדק?",
-        fieldType: "switch"
+        fieldType: "switch",
+        collapseTitle: "סגנון"
     },
     {
         id: "hozerBitshuva",
         text: "מעוניין/ת בחוזר/ת בתשובה?",
-        fieldType: "switch"
+        fieldType: "switch",
+        collapseTitle: "סגנון"
+    },
+    {
+        id: "moveLocation",
+        text: "מעוניין/ת להשאר ולגור בעיר מגוריי?",
+        fieldType: "switch",
+        collapseTitle: "פרטים כלליים"
+    },
+    {
+        id: "smoker",
+        text: "מעשן/ת?",
+        fieldType: "switch",
+        collapseTitle: "פרטים כלליים"
     },
     {
         id: "drivingLicense",
         text: "רישיון נהיגה?",
-        fieldType: "switch"
+        fieldType: "switch",
+        collapseTitle: "פרטים כלליים"
     },
     {
         id: "cohen",
         text: "את/ה כהן/ת?",
-        fieldType: "switch"
+        fieldType: "switch",
+        collapseTitle: "פרטים כלליים"
+    },
+    {
+        id: "zerem",
+        text: "זרם:",
+        fieldType: "select",
+        handlePress: () => console.log(),
+        options: [
+            { id: 1, name: "zerem", label: "חסיד" },
+            { id: 2, name: "zerem", label: "ליטאי" },
+            { id: 3, name: "zerem", label: "עדות המזרח" }
+        ],
+        collapseTitle: "פרטים כלליים"
+    },
+    {
+        id: "hasidut",
+        text: "זרם חסידות?",
+        keyboardTypeOption: "default",
+        fieldType: "input",
+        condition: [
+            { fieldId: "zerem", value: "1" }
+        ],
+        collapseTitle: "פרטים כלליים"
+    },
+    {
+        id: "tribe",
+        text: "עדה?",
+        keyboardTypeOption: "default",
+        fieldType: "input",
+        condition: [
+            { fieldId: "zerem", value: "3" }
+        ],
+        collapseTitle: "פרטים כלליים"
+    },
+    {
+        id: "highSchoolName",
+        text: "שם של תיכון:",
+        keyboardTypeOption: "default",
+        fieldType: "input",
+        condition: [
+            { fieldId: "gender", value: "2" }
+        ],
+        collapseTitle: "עיסוק והשכלה"
+    },
+    {
+        id: "seminarName",
+        text: "שם של סמינר:",
+        keyboardTypeOption: "default",
+        fieldType: "input",
+        condition: [
+            { fieldId: "gender", value: "2" }
+        ],
+        collapseTitle: "עיסוק והשכלה"
     },
     {
         id: "whatWorks",
@@ -215,8 +304,37 @@ const detailsFormArray: FormField[] = [
                 isShow: [
                     { fieldId: "gender", value: "1" }
                 ]
+            },
+            {
+                id: 7,
+                name: "whatWorks",
+                label: "בצבא",
+                isShow: [
+                    { fieldId: "gender", value: "1" }
+                ]
+            },
+            {
+                id: 8,
+                name: "whatWorks",
+                label: "שירות לאומי",
+                isShow: [
+                    { fieldId: "gender", value: "2" }
+                ]
             }
         ],
+        collapseTitle: "עיסוק והשכלה"
+    },
+    {
+        id: "isServedInArmy",
+        text: "שירתת בצבא?",
+        fieldType: "switch",
+        collapseTitle: "עיסוק והשכלה"
+    },
+    {
+        id: "isNationalService",
+        text: "שירתת בשירות לאומי?",
+        fieldType: "switch",
+        collapseTitle: "עיסוק והשכלה"
     },
     {
         id: "smallYeshiva",
@@ -226,7 +344,8 @@ const detailsFormArray: FormField[] = [
         condition: [
             { fieldId: "whatWorks", value: "1" },
             { fieldId: "gender", value: "1" }
-        ]
+        ],
+        collapseTitle: "עיסוק והשכלה"
     },
     {
         id: "BigYeshiva",
@@ -236,7 +355,8 @@ const detailsFormArray: FormField[] = [
         condition: [
             { fieldId: "gender", value: "1" },
             { fieldId: "whatWorks", value: "1" },
-        ]
+        ],
+        collapseTitle: "עיסוק והשכלה"
     },
     {
         id: "kibutz",
@@ -246,7 +366,8 @@ const detailsFormArray: FormField[] = [
         condition: [
             { fieldId: "whatWorks", value: "1" },
             { fieldId: "gender", value: "1" }
-        ]
+        ],
+        collapseTitle: "עיסוק והשכלה"
     },
     {
         id: "colel",
@@ -256,7 +377,8 @@ const detailsFormArray: FormField[] = [
         condition: [
             { fieldId: "gender", value: "1" },
             { fieldId: "whatWorks", value: "2" },
-        ]
+        ],
+        collapseTitle: "עיסוק והשכלה"
     },
     {
         id: "nameOfWork",
@@ -267,7 +389,8 @@ const detailsFormArray: FormField[] = [
             { fieldId: "whatWorks", value: "3" },
             { fieldId: "whatWorks", value: "5" },
             { fieldId: "whatWorks", value: "6" }
-        ]
+        ],
+        collapseTitle: "עיסוק והשכלה"
     },
     {
         id: "whatLearning",
@@ -277,7 +400,8 @@ const detailsFormArray: FormField[] = [
         condition: [
             { fieldId: "whatWorks", value: "4" },
             { fieldId: "whatWorks", value: "5" }
-        ]
+        ],
+        collapseTitle: "עיסוק והשכלה"
     },
     {
         id: "education",
@@ -308,8 +432,14 @@ const detailsFormArray: FormField[] = [
                     { fieldId: "gender", value: "1" },
                     { fieldId: "whatWorks", value: "1" },
                 ]
-            }
-        ]
+            },
+            {
+                id: 5,
+                name: "education",
+                label: "12 שנות לימוד",
+            },
+        ],
+        collapseTitle: "עיסוק והשכלה"
     },
     {
         id: "bodyStructure",
@@ -320,7 +450,8 @@ const detailsFormArray: FormField[] = [
             { id: 1, name: "bodyStructure", label: "רזה" },
             { id: 2, name: "bodyStructure", label: "בריא/ה" },
             { id: 3, name: "bodyStructure", label: "מלא/ה" }
-        ]
+        ],
+        collapseTitle: "מראה חיצוני"
     },
     {
         id: "skinColor",
@@ -331,7 +462,8 @@ const detailsFormArray: FormField[] = [
             { id: 1, name: "skinColor", label: "בהיר/ה" },
             { id: 2, name: "skinColor", label: "ממוצע - לא כהה ולא בהיר/ה" },
             { id: 3, name: "skinColor", label: "כהה" }
-        ]
+        ],
+        collapseTitle: "מראה חיצוני"
     },
     {
         id: "beardType",
@@ -346,7 +478,8 @@ const detailsFormArray: FormField[] = [
         ],
         condition: [
             { fieldId: "gender", value: "1" }
-        ]
+        ],
+        collapseTitle: "מראה חיצוני"
     },
     {
         id: "clothes",
@@ -360,76 +493,54 @@ const detailsFormArray: FormField[] = [
         ],
         condition: [
             { fieldId: "gender", value: "1" }
-        ]
-    },
-    {
-        id: "zerem",
-        text: "זרם:",
-        fieldType: "select",
-        handlePress: () => console.log(),
-        options: [
-            { id: 1, name: "zerem", label: "חסיד" },
-            { id: 2, name: "zerem", label: "ליטאי" },
-            { id: 3, name: "zerem", label: "ספרדי" }
-        ]
-    },
-    {
-        id: "hasidut",
-        text: "זרם חסידות?",
-        keyboardTypeOption: "default",
-        fieldType: "input",
-        condition: [
-            { fieldId: "zerem", value: "1" }
-        ]
-    },
-    {
-        id: "tribe",
-        text: "עדה?",
-        keyboardTypeOption: "default",
-        fieldType: "input",
-        condition: [
-            { fieldId: "zerem", value: "3" }
-        ]
+        ],
+        collapseTitle: "מראה חיצוני"
     },
     {
         id: "fatherName",
         text: "שם של האבא:",
         keyboardTypeOption: "default",
-        fieldType: "input"
+        fieldType: "input",
+        collapseTitle: "פרטים נוספים"
     },
     {
         id: "motherName",
         text: "שם של האמא:",
         keyboardTypeOption: "default",
-        fieldType: "input"
+        fieldType: "input",
+        collapseTitle: "פרטים נוספים"
     },
     {
         id: "rabbiName",
         text: "מי הרב שלי?",
         keyboardTypeOption: "default",
-        fieldType: "input"
+        fieldType: "input",
+        collapseTitle: "פרטים נוספים"
     },
     {
         id: "importantInfo",
         text: "קצת עלי...",
         keyboardTypeOption: "default",
         fieldType: "input",
-        multiline: true
+        multiline: true,
+        collapseTitle: "פרטים נוספים"
     },
     {
         id: "familyInfo",
         text: "קצת על המשפחה",
         keyboardTypeOption: "default",
         fieldType: "input",
-        multiline: true
+        multiline: true,
+        collapseTitle: "פרטים נוספים"
     },
     {
         id: "phonesForInquiries",
         text: "טלפונים לברורים:",
         keyboardTypeOption: "default",
         fieldType: "input",
-        multiline: true
+        multiline: true,
+        collapseTitle: "פרטים נוספים"
     },
-]
+];
 
 export default detailsFormArray;

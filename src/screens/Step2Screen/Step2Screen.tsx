@@ -1,12 +1,22 @@
 
 import React from 'react';
-import MatchForm from '../../components/MatchForm/MatchForm';
 import { styles } from './Step2Screen.style';
+import generateField from '../../utils/GenerateField';
+import matchFormArray from '../../utils/MatchFormFields';
+import WhiteCard from '../../components/WhiteCard/WhiteCard';
 
 const Step2Screen = () => {
 
   return (
-    <MatchForm />
+    <>
+      {
+        matchFormArray.map((field, index) => {
+          return <WhiteCard key={index} customStyle={styles.container}>
+            {generateField(field)}
+          </WhiteCard>
+        })
+      }
+    </>
   );
 };
 

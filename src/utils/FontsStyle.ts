@@ -15,6 +15,12 @@ export const FontsStyle = StyleSheet.create({
         color: Colors.btn,
         fontSize: 24,
     },
+    textDecoration: {
+        fontFamily: fontFamily.semiBold,
+        color: Colors.black,
+        textDecorationLine: "underline",
+        fontSize: 24,
+    },
     subTitle: {
         fontFamily: fontFamily.bold,
         textAlign: "right",
