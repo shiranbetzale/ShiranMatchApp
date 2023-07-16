@@ -1,10 +1,9 @@
 import { StyleSheet } from 'react-native';
 import Colors from '../../utils/Colors';
-import colors from '../../utils/Colors';
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.white,
+    backgroundColor: Colors.white,
     borderRadius: 4,
     paddingHorizontal: 15,
     paddingVertical: 10,

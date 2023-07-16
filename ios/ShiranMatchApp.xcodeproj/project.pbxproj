@@ -14,6 +14,13 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-ShiranMatchApp-ShiranMatchAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ShiranMatchApp-ShiranMatchAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		C371AD762A63A37D004917FC /* IBMPlexSansHebrew-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C371AD6F2A63A37D004917FC /* IBMPlexSansHebrew-Medium.ttf */; };
+		C371AD772A63A37D004917FC /* IBMPlexSansHebrew-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C371AD702A63A37D004917FC /* IBMPlexSansHebrew-ExtraLight.ttf */; };
+		C371AD782A63A37D004917FC /* IBMPlexSansHebrew-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C371AD712A63A37D004917FC /* IBMPlexSansHebrew-SemiBold.ttf */; };
+		C371AD792A63A37D004917FC /* IBMPlexSansHebrew-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C371AD722A63A37D004917FC /* IBMPlexSansHebrew-Bold.ttf */; };
+		C371AD7A2A63A37D004917FC /* IBMPlexSansHebrew-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C371AD732A63A37D004917FC /* IBMPlexSansHebrew-Regular.ttf */; };
+		C371AD7B2A63A37D004917FC /* IBMPlexSansHebrew-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C371AD742A63A37D004917FC /* IBMPlexSansHebrew-Thin.ttf */; };
+		C371AD7C2A63A37D004917FC /* IBMPlexSansHebrew-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C371AD752A63A37D004917FC /* IBMPlexSansHebrew-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +50,13 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-ShiranMatchApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShiranMatchApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ShiranMatchApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ShiranMatchApp-ShiranMatchAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiranMatchApp-ShiranMatchAppTests.release.xcconfig"; path = "Target Support Files/Pods-ShiranMatchApp-ShiranMatchAppTests/Pods-ShiranMatchApp-ShiranMatchAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		C371AD6F2A63A37D004917FC /* IBMPlexSansHebrew-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IBMPlexSansHebrew-Medium.ttf"; path = "../assets/fonts/IBMPlexSansHebrew-Medium.ttf"; sourceTree = "<group>"; };
+		C371AD702A63A37D004917FC /* IBMPlexSansHebrew-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IBMPlexSansHebrew-ExtraLight.ttf"; path = "../assets/fonts/IBMPlexSansHebrew-ExtraLight.ttf"; sourceTree = "<group>"; };
+		C371AD712A63A37D004917FC /* IBMPlexSansHebrew-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IBMPlexSansHebrew-SemiBold.ttf"; path = "../assets/fonts/IBMPlexSansHebrew-SemiBold.ttf"; sourceTree = "<group>"; };
+		C371AD722A63A37D004917FC /* IBMPlexSansHebrew-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IBMPlexSansHebrew-Bold.ttf"; path = "../assets/fonts/IBMPlexSansHebrew-Bold.ttf"; sourceTree = "<group>"; };
+		C371AD732A63A37D004917FC /* IBMPlexSansHebrew-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IBMPlexSansHebrew-Regular.ttf"; path = "../assets/fonts/IBMPlexSansHebrew-Regular.ttf"; sourceTree = "<group>"; };
+		C371AD742A63A37D004917FC /* IBMPlexSansHebrew-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IBMPlexSansHebrew-Thin.ttf"; path = "../assets/fonts/IBMPlexSansHebrew-Thin.ttf"; sourceTree = "<group>"; };
+		C371AD752A63A37D004917FC /* IBMPlexSansHebrew-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IBMPlexSansHebrew-Light.ttf"; path = "../assets/fonts/IBMPlexSansHebrew-Light.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -86,6 +100,7 @@
 		13B07FAE1A68108700A75B9A /* ShiranMatchApp */ = {
 			isa = PBXGroup;
 			children = (
+				C371AD6E2A63A292004917FC /* Resources */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -146,6 +161,20 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-ShiranMatchApp-ShiranMatchAppTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C371AD6E2A63A292004917FC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C371AD722A63A37D004917FC /* IBMPlexSansHebrew-Bold.ttf */,
+				C371AD702A63A37D004917FC /* IBMPlexSansHebrew-ExtraLight.ttf */,
+				C371AD752A63A37D004917FC /* IBMPlexSansHebrew-Light.ttf */,
+				C371AD6F2A63A37D004917FC /* IBMPlexSansHebrew-Medium.ttf */,
+				C371AD732A63A37D004917FC /* IBMPlexSansHebrew-Regular.ttf */,
+				C371AD712A63A37D004917FC /* IBMPlexSansHebrew-SemiBold.ttf */,
+				C371AD742A63A37D004917FC /* IBMPlexSansHebrew-Thin.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,8 +271,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C371AD782A63A37D004917FC /* IBMPlexSansHebrew-SemiBold.ttf in Resources */,
+				C371AD7C2A63A37D004917FC /* IBMPlexSansHebrew-Light.ttf in Resources */,
+				C371AD7B2A63A37D004917FC /* IBMPlexSansHebrew-Thin.ttf in Resources */,
+				C371AD772A63A37D004917FC /* IBMPlexSansHebrew-ExtraLight.ttf in Resources */,
+				C371AD7A2A63A37D004917FC /* IBMPlexSansHebrew-Regular.ttf in Resources */,
+				C371AD762A63A37D004917FC /* IBMPlexSansHebrew-Medium.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				C371AD792A63A37D004917FC /* IBMPlexSansHebrew-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

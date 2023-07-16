@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { styles } from './Wizard.style';
 import { WizardBtnType, WizardTxtType, WizardType } from './Wizard.type';
-import { View, ScrollView } from 'react-native';
+import { View } from 'react-native';
 import { FontsStyle } from '../../utils/FontsStyle';
 import WizardHeader from './WizardHeader';
 import CustomImageBg from '../CustomImageBg/CustomImageBg';
@@ -18,13 +18,13 @@ const Wizard = (props: WizardType) => {
   }
 
   const btnAProps: WizardBtnType = {
-    btnDis: wizardStep <= 1,
+    isBtnDis: wizardStep <= 1,
     btnTxt: "הקודם",
     btnFunc: () => setWizarsStep(wizardStep - 1)
   }
 
   const btnBProps: WizardBtnType = {
-    btnDis: wizardStep >= wizardSteps.length,
+    isBtnDis: wizardStep >= wizardSteps.length,
     btnTxt: "הבא",
     btnFunc: () => setWizarsStep(wizardStep + 1)
   }
