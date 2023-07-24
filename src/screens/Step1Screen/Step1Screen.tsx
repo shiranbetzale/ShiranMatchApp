@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import CustomCollapse from '../../components/CustomCollapse/CustomCollapse';
 import { CollapseSingleType } from '../../components/CustomCollapse/CustomCollapse.type';
 import detailsFormArray from '../../utils/DetailsFormFields';
-import { FormField, Option } from '../../utils/FormFields.type';
+import { Option } from '../../utils/FormFields.type';
 import { groupBy } from '../../utils/generalFunction';
 
 const Step1Screen = () => {
@@ -39,12 +39,6 @@ const Step1Screen = () => {
       sections={detailsFormArrayFiltered}
       handlePress={handlePress}
     />
-
-    // {/* במידה ויש ילדים */}
-    // <>
-    //   <CustomInput placeholder={'שם מלא'} keyboardType={'default'} />
-    //   <CustomInput placeholder={'גיל'} keyboardType={'numeric'} />
-    //
   );
 };
 

@@ -18,7 +18,7 @@ const CustomRadioButton = (props: CustomRadioButtonType) => {
   return (
     <>
       <CustomText text={text} />
-      <View style={styles.container} >
+      <>
         {radiosArray.map((radioItem) => {
           return <TouchableOpacity
             key={`${radioItem.name}_${radioItem.id}`}
@@ -35,7 +35,7 @@ const CustomRadioButton = (props: CustomRadioButtonType) => {
             </View>
           </TouchableOpacity>
         })}
-      </View>
+      </>
     </>
   );
 };

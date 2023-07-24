@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import GeneralStyle from "../../utils/GeneralStyle";
 
 export const styles = StyleSheet.create({
   container: {
@@ -8,13 +9,13 @@ export const styles = StyleSheet.create({
     flexDirection: "row-reverse",
   },
   dateContainer: {
-    marginLeft: 15,
+    marginLeft: GeneralStyle.space,
     flexDirection: "row-reverse",
     alignItems: "center",
   },
   datePickerBtn: {
     paddingHorizontal: 0,
     paddingVertical: 0,
-    marginRight: 10
+    marginRight: GeneralStyle.space
   }
 });

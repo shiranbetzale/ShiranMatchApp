@@ -22,7 +22,7 @@ export const FontsStyle = StyleSheet.create({
         fontSize: 24,
     },
     subTitle: {
-        fontFamily: fontFamily.bold,
+        fontFamily: fontFamily.medium,
         textAlign: "right",
         color: Colors.black,
         fontSize: 16,
@@ -32,5 +32,11 @@ export const FontsStyle = StyleSheet.create({
         textAlign: "right",
         color: Colors.black,
         fontSize: 16,
+    },
+    textRight: {
+        textAlign: "right",
+    },
+    textLeft: {
+        textAlign: "left",
     }
 });

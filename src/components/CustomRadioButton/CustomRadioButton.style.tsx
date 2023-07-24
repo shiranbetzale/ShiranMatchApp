@@ -1,25 +1,22 @@
 import { StyleSheet } from "react-native";
 import Colors from "../../utils/Colors";
+import GeneralStyle from "../../utils/GeneralStyle";
 
 export const styles = StyleSheet.create({
-  container: {
-    marginTop: 5,
-  },
   btn: {
-    marginTop: 5
+    marginTop: GeneralStyle.space
   },
   optionsContainer: {
     alignContent: "center",
     flexDirection: "row-reverse",
     alignItems: "center",
-    marginBottom: 10
   },
   circle: {
     width: 30,
     height: 30,
     borderRadius: 15,
     backgroundColor: Colors.white,
-    marginLeft: 10,
+    marginLeft: GeneralStyle.space,
     borderColor: Colors.black,
     borderWidth: 2,
   },

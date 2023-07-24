@@ -4,16 +4,15 @@ import GeneralStyle from '../../utils/GeneralStyle';
 
 export const styles = StyleSheet.create({
     container: {
-        flex: 1,
-    },
-    whiteCardContainer: {
-        marginBottom: GeneralStyle.space,
-    },
-    collapseBtn: {
+        backgroundColor: Colors.lightBrown,
         alignItems: "flex-end",
-        marginBottom: GeneralStyle.space,
-        opacity: 0.85,
-        borderColor: Colors.black,
+        padding: GeneralStyle.space
+    },
+    menuBtn: {
+        width: 35,
+        height: 35,
+        backgroundColor: Colors.transparent,
         borderWidth: 2,
+        justifyContent: "center",
     }
 });

@@ -1,28 +1,22 @@
 import { Dimensions, StyleSheet } from 'react-native';
 import Colors from '../../utils/Colors';
+import GeneralStyle from '../../utils/GeneralStyle';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: '100%',
+    width: "100%",
   },
   wizardContainer: {
-    width: '100%',
-    borderBottomWidth: 1,
+    borderBottomWidth: 2,
     justifyContent: "space-between",
     flexDirection: "row-reverse",
     alignItems: "center",
-    padding: 10,
+    padding: GeneralStyle.space,
     backgroundColor: Colors.darkGreen,
   },
   containerDynamicComp: {
-    alignItems: "stretch",
-    width: '100%'
-  },
-  image: {
-    alignItems: "center",
-    width: Dimensions.get("screen").width,
-    height: Dimensions.get("screen").height - 100,
-    paddingBottom: 50
+    margin: GeneralStyle.space,
+    height: Dimensions.get("window").height - 200,
   },
 });

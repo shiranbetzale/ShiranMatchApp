@@ -1,22 +1,18 @@
 import { StyleSheet } from 'react-native';
 import Colors from '../../utils/Colors';
+import GeneralStyle from '../../utils/GeneralStyle';
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    paddingHorizontal: 10,
-  },
-  button: {
     alignItems: 'center',
     backgroundColor: Colors.lightBrown,
-    paddingVertical: 10,
-    paddingHorizontal: 15,
+    paddingVertical: GeneralStyle.space,
+    paddingHorizontal: GeneralStyle.space,
     borderRadius: 5
   },
   countContainer: {
     alignItems: 'center',
-    padding: 10,
+    padding: GeneralStyle.space,
   },
   disabled: {
     opacity: 0.3

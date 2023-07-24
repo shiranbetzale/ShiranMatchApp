@@ -8,11 +8,10 @@ import { FontsStyle } from "../../utils/FontsStyle";
 
 const CustomSingleCheckBox = (props: Option) => {
   const { id, label } = props;
-
   const [isSelected, setSelection] = useState(false);
 
   return (
-    < >
+    <>
       <CustomText text={label} customStyle={FontsStyle.text} />
       <CheckBox
         // hideBox={true}

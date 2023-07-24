@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import GeneralStyle from "../../utils/GeneralStyle";
 
 export const styles = StyleSheet.create({
   container: {
@@ -7,10 +8,13 @@ export const styles = StyleSheet.create({
     flexDirection: "row-reverse",
     justifyContent: "space-between",
   },
-  text: {
-    marginLeft: 10
+  switchText: {
+    width: "80%"
   },
-  maxWidth: {
-    maxWidth: 200
+  text: {
+    marginLeft: GeneralStyle.space
+  },
+  switch: {
+    width: "20%"
   }
 });

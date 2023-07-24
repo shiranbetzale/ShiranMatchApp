@@ -4,6 +4,7 @@ import CustomText from '../CustomText/CustomText';
 import { styles } from './CustomRange.style';
 import { CustomRangeType } from './CustomRange.type';
 import MultiSlider from '@ptomasroos/react-native-multi-slider';
+import { FontsStyle } from '../../utils/FontsStyle';
 
 const CustomRange = (props: CustomRangeType) => {
   const { text, minRange = 0, maxRange = 10, step = 1 } = props;
@@ -16,8 +17,11 @@ const CustomRange = (props: CustomRangeType) => {
   return (
     <View style={styles.container}>
       <CustomText text={text} />
+
       <View style={styles.rangeContainer}>
-        <CustomText text={rangeValues[0]} />
+        <View style={styles.rangeText}>
+          <CustomText text={rangeValues[0]} customStyle={FontsStyle.textRight} />
+        </View>
         <View style={styles.range}>
           <MultiSlider
             values={rangeValues}
@@ -33,7 +37,9 @@ const CustomRange = (props: CustomRangeType) => {
             selectedStyle={styles.selectedStyle}
           />
         </View>
-        <CustomText text={rangeValues[1]} />
+        <View style={styles.rangeText}>
+          <CustomText text={rangeValues[1]} customStyle={FontsStyle.textLeft} />
+        </View>
       </View>
     </View>
   );

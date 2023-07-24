@@ -31,8 +31,7 @@ const CustomCollapse = (props: CustomCollapseType) => {
       renderItem={({ section: { title }, item }) => {
         const isExpanded = expandedSections.has(title);
         if (!isExpanded) return null;
-
-        return <WhiteCard customStyle={styles.container}>
+        return <WhiteCard customStyle={styles.whiteCardContainer}>
           {generateField({ ...item, handlePress })}
         </WhiteCard>
       }}

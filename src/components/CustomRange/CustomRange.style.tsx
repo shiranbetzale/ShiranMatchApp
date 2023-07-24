@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import Colors from '../../utils/Colors';
+import GeneralStyle from '../../utils/GeneralStyle';
 
 export const styles = StyleSheet.create({
   container: {
@@ -12,13 +13,17 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: "center",
     width: "100%",
-    marginTop: 10
+    marginTop: GeneralStyle.space
   },
   range: {
-    marginHorizontal: 20
+    alignItems: 'center',
+    width: "70%",
+  },
+  rangeText: {
+    width: "15%",
   },
   markerStyle: {
-    backgroundColor: Colors.border
+    backgroundColor: Colors.border,
   },
   pressedMarkerStyle: {
     backgroundColor: Colors.btn

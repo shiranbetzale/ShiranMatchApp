@@ -90,6 +90,16 @@ const detailsFormArray: FormField[] = [
         collapseTitle: "פרטים אישיים"
     },
     {
+        id: "countOfChildren",
+        text: "הסדרי שהות?",
+        keyboardTypeOption: "numeric",
+        fieldType: "input",
+        condition: [
+            { fieldId: "status", value: "5" }
+        ],
+        collapseTitle: "פרטים אישיים"
+    },
+    {
         id: "typeOfHeadCover",
         text: "כיסוי ראש:",
         fieldType: "select",

@@ -4,20 +4,22 @@ import GeneralStyle from '../../utils/GeneralStyle';
 
 export const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        width: "100%",
-        flexDirection: "row-reverse",
         alignItems: "center",
-        marginBottom: GeneralStyle.space,
-        alignContent: "space-between",
+        opacity: 0.9
     },
     imgContainer: {
         borderColor: Colors.black,
         width: 100,
         height: 100,
         borderRadius: 50,
+        alignItems: "center",
+        marginTop: GeneralStyle.space,
         overflow: 'hidden',
-        marginLeft: GeneralStyle.space,
+    },
+    infoContainer: {
+        width: "80%",
+        alignItems: "center",
+        marginVertical: GeneralStyle.space,
     },
     img: {
         width: "100%",
@@ -25,5 +27,11 @@ export const styles = StyleSheet.create({
     },
     info: {
         flexDirection: "row-reverse",
+    },
+    boy: {
+        backgroundColor: Colors.lightBlue
+    },
+    girl: {
+        backgroundColor: Colors.pink
     },
 });

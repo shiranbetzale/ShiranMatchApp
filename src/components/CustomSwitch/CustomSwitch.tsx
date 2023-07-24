@@ -12,19 +12,21 @@ const CustomSwitch = (props: CustomSwitchType) => {
 
   return (
     <View style={styles.container}>
-      <View style={isMaxWidth && styles.maxWidth}>
+      <View style={styles.switchText}>
         <CustomText
           text={text}
           customStyle={styles.text}
         />
       </View>
-      <Switch
-        trackColor={{ false: Colors.black, true: Colors.border }}
-        thumbColor={isEnabled ? Colors.btn : Colors.white}
-        ios_backgroundColor={Colors.black}
-        onValueChange={toggleSwitch}
-        value={isEnabled}
-      />
+      <View style={styles.switch}>
+        <Switch
+          trackColor={{ false: Colors.black, true: Colors.border }}
+          thumbColor={isEnabled ? Colors.btn : Colors.white}
+          ios_backgroundColor={Colors.black}
+          onValueChange={toggleSwitch}
+          value={isEnabled}
+        />
+      </View>
     </View>
   );
 }

@@ -5,12 +5,12 @@ import { styles } from './CustomButton.style';
 import { CustomButtonType } from './CustomButton.type';
 
 const CustomButton = (props: CustomButtonType) => {
-  const { onPress = () => { }, text, customStyle, disabled, children } = props;
+  const { onPress = () => { }, text, customStyle, isDisabled, children } = props;
 
   return (
     <TouchableOpacity
-      style={[styles.button, { ...customStyle }, disabled && styles.disabled]}
-      onPress={onPress} disabled={disabled}
+      style={[styles.container, { ...customStyle }, isDisabled && styles.disabled]}
+      onPress={onPress} disabled={isDisabled}
     >
       {text &&
         <CustomText text={text} />

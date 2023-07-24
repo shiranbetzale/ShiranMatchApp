@@ -11,7 +11,7 @@ const WizardHeader = (props: WizardHeaderType) => {
   return (
     <View style={styles.wizardContainer}>
       <CustomButton
-        disabled={btnAProps?.btnDis}
+        isDisabled={btnAProps?.isBtnDis}
         text={btnAProps?.btnTxt}
         onPress={btnAProps?.btnFunc}
       />
@@ -20,7 +20,7 @@ const WizardHeader = (props: WizardHeaderType) => {
         text={textProps?.text}
       />
       <CustomButton
-        disabled={btnBProps?.btnDis}
+        isDisabled={btnBProps?.isBtnDis}
         text={btnBProps?.btnTxt}
         onPress={btnBProps?.btnFunc}
       />

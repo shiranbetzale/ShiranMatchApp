@@ -4,13 +4,10 @@ import { WizardBtnType, WizardTxtType, WizardType } from './Wizard.type';
 import { View } from 'react-native';
 import { FontsStyle } from '../../utils/FontsStyle';
 import WizardHeader from './WizardHeader';
-import CustomImageBg from '../CustomImageBg/CustomImageBg';
 
 const Wizard = (props: WizardType) => {
   const { wizardSteps = [] } = props;
   const [wizardStep, setWizarsStep] = useState<number>(1);
-
-  const image = "../../images/bg2.jpg";
 
   const renderComp = () => {
     const SpecificStep = wizardSteps.find((step) => step.id === wizardStep)?.comp
@@ -41,14 +38,9 @@ const Wizard = (props: WizardType) => {
         btnBProps={btnBProps}
         textProps={txtProps}
       />
-      <CustomImageBg
-        src={require(image)}
-        customImgStyle={styles.image}
-      >
-        <View style={styles.containerDynamicComp}>
-          {renderComp()}
-        </View>
-      </CustomImageBg>
+      <View style={styles.containerDynamicComp}>
+        {renderComp()}
+      </View>
     </View>
   );
 };

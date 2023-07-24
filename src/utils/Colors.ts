@@ -32,6 +32,8 @@ const shadowDeferrer = (iOS: any, newAndroid: any, oldAndroid: any) => {
 };
 
 const Colors = {
+    pink: "#e758b2",
+    lightBlue: "#0b94be",
     lightBrown: "#c3b08c",
     white: '#fff',
     black: "#3a2915",
@@ -41,6 +43,7 @@ const Colors = {
     btn: "#f2e8d3",
     darkGreen: "#656e25",
     brown: "#836c4c",
+    transparent: "transparent",
     Shadow: shadowDeferrer(shadowiOS, shadowAndroid, oldShadow),
 }
 
